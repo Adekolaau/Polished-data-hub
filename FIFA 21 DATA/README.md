@@ -1,5 +1,7 @@
 ## FIFA 21 Data Cleaning Challenge
 
+![Screenshot 2023-04-22 120302](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/50f315a9-c82e-4d25-8dfc-e04f3870038c)
+
 ## Introduction
 Data cleaning is an important process that ensures the accuracy and reliability of data. It involves identifying and correcting errors, inconsistencies, and inaccuracies in data to ensure that it is accurate, reliable, and usable for analysis. Data cleaning can be a tedious and time-consuming process, especially when dealing with large and messy datasets like this one. 
 The steps taken will be explored to clean a messy data set which is titled “Fifa21 raw data v2.csv.”

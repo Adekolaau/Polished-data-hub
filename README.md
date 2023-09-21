@@ -6,7 +6,7 @@ A centralized repository for meticulously cleaned and refined data sets, ensurin
 
 This project was undertaken as part of a month-long data analytics challenge within the community I joined. The primary objective was to clean and analyze large, messy datasets related to FIFA 2021.
 
-## Key Points
+__Key Points__
 
 * __Data Source__: Kaggle
 * __Data Cleaning Tool__: Microsoft Excel with Power Query

@@ -1,0 +1,48 @@
+Data Transformation/Cleaning
+
+I started by using Visual Basic for Application (VBA) to remove the special characters, which was successful.
+
+However, a colleague suggested using Power Query, which turned out to be the perfect tool for the job. The following steps were taken in Power 
+Query to clean the data:
+
+1. Load the data: A new Excel workbook was opened, and on the menu page, I clicked on Data and located the New Query option. From the drop-down menu, 
+I selected "From File" and chose the compacted file for the database, which was in CSV format. The file was loaded, and I changed the file origin to 
+65001: Unicode (UTF-8) and also selected "Data Type Detection Based on the entire dataset." Changing the file origin ensured that the players were 
+correctly spelled, and it helped to relieve me of the pain of special characters.
+
+2. Load the data into Power Query: After loading the data, I clicked on the Load drop-down menu and selected "Load To." From the drop-down menu, I chose "Table" and "Existing Worksheet" and clicked "Load." The data was loaded onto the Excel sheet, and I had to locate their Power Query on the right-hand side of the Excel and double-clicked on the Work Query file to load their file to Power Query.
+
+3. Align the data: I surveyed the data to find out why the cells were big and noticed that the Club column in the observation columns was down while others were 
+written up. I selected the column, right-clicked from the attribute, selected "Transform" from the drop-down menu, and selected the "Length" option. This procedure 
+adjusted it, and the whole data set was well-aligned.
+
+4. Use filter to check for any data to be cleaned: I used the filter to check for any data set to be cleaned and noticed that Name, LongName, PhotoUrl, PlayerUrl, Nationality, Age, OVA, POT, Club were already cleaned and were in good shape.
+
+5. Clean the Contract column: I proceeded to remove (~) and replace it with (-) in the Contract column. This was achieved by selecting the column from the attribute, 
+right-clicking on the Contract attribute, and selecting “Replaced Values,” where I substituted the (~) with the (-).
+
+6. Separate positions of the players: I decided to separate the positions of the players. This was achieved by selecting the Position menu from the attribute (header) 
+and right-clicking, then selecting “Split Columns,” picking the delimiter, and selecting “OK.” The Position.2 and Position.3 had a lot of nulls, so I proceeded to 
+replace them with empty spaces. I used the filter to check the position columns and noticed that they had been properly cleaned.
+
+7. Convert height to cm: I noticed that some heights were in cm while others were in foot-inch. I decided to make everything in cm. To do this, I split the column by delimiter and chose the custom option, inputting the proper conversion figure. This created a new column called height2, with all values in inches, leaving the height1 column with cm and feet. I then proceeded to convert the height1 in feet to inches by creating a new column using the conditional column function.
+
+I removed the cm sign, changed the height1 and custom columns to decimal numbers, and multiplied the height in cm by 1 and the height in feet by 12 to convert them 
+to inches. We then added the height2 column (in inches) to the multiplication column (in inches) and replaced null values with zero. This created a new column called 
+the Addition column. We then converted the total height to cm by dividing the addition column by the custom1 column, using the divide function in the standard. 
+This created a new column called the division column, with all values in cm.
+
+We changed the division column to a whole number, replaced the initial height column with the division column, deleted the custom, custom1, multiplication, and 
+addition columns, and then dragged the height in cm to replace the height1 and height2 columns.
+
+8. Convert weight to kg: In the weight column, I noticed that the weight was in kg and lbs. To standardize the weight measurement, I decided to convert everything 
+to kg. Using the conditional column function, I created a new column called KG to convert lbs to kg.
+
+I then changed the data type of the weight column to a decimal number and removed the kg and pounds. Next, I multiplied both the new KG column and the weight 
+column to create a new column called the multiplication column, which I renamed to the weight column in kg (weight (kg)).
+
+The data cleaning process continued until the dataset was free of errors and 100% accurate.
+
+This example shows that data cleaning can be a complex process, but it is essential to ensure that the data is reliable and can be used for analysis. 
+The steps I took to clean the data may not be the only way to do it, but they demonstrate the importance of attention to detail and the use of tools 
+available to get the job done.

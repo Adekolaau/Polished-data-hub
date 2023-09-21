@@ -2,7 +2,7 @@
 
 ![Screenshot 2023-04-22 120302](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/50f315a9-c82e-4d25-8dfc-e04f3870038c)
 
-## Introduction
+__Introduction__
 Data cleaning is an important process that ensures the accuracy and reliability of data. It involves identifying and correcting errors, inconsistencies, and inaccuracies in data to ensure that it is accurate, reliable, and usable for analysis. Data cleaning can be a tedious and time-consuming process, especially when dealing with large and messy datasets like this one. 
 The steps taken will be explored to clean a messy data set which is titled “Fifa21 raw data v2.csv.”
 
@@ -10,20 +10,20 @@ _Note: This dataset was pulled from the Kaggle, and was organized by (@PromiseNo
 
 Microsoft Excel was used for this challenge
 
-## Skills Demonstrated
+__Skills Demonstrated__
 - Column splitting
 - Duplicate removal
 - Error elimination
 
-## FIFA 21 Raw Dataset:
+__FIFA 21 Raw Dataset:__
 - 18,980 rows
 - 77 columns
 
-## Sample of Raw Dataset
+__Sample of Raw Dataset__
 
 ![Screenshot 2023-03-10 152640](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/1962c6ae-9711-40d9-a4e6-cc9e05e443a8)
 
-## Data Cleaning Process
+__Data Cleaning Process__
 I started by using Visual Basic for Application (VBA) to remove the special characters, which was successful.
 
 ![Screenshot 2023-03-13 190617](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/0742bf71-8fd2-4440-8109-f3694fe30995)

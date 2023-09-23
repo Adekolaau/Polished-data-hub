@@ -21,11 +21,28 @@ This project was completed as part of my Google Data Analytics Professional Cert
 
 __Key Points__
 
-* __Data Source__: Kaggle
+* __Data Source:__ Kaggle
 * __Programming Language:__ R
 
 __Highlights__
 
 * In-depth analysis of Bellabeat datasets to uncover patterns and trends.
 * Creation of informative visualizations to aid in understanding.
-* Repository includes data sources, R scripts, and visualizations.
+* Repository includes data sources, R scripts, and the Flexboard dashboard.
+
+## Project 3: E-COMMERCE DATA
+
+This project is the culmination of my Google Data Analytics Professional Certificate from Coursera, where I embarked on an exploratory journey through the Olist E-commerce Public Dataset. The goal was to gain insights into smart device usage and uncover growth opportunities for Olist.
+
+__Key Points__
+
+* __Data Source:__ Kaggle
+* __Programming Language:__ SQL, R
+* __Visualization:__ Symphony of R programming
+* __Tools:__ Microsoft SQL Server, Excel, Power Query
+
+__Highlights__
+
+* Thorough exploration, data cleansing, and analysis of Olist's comprehensive e-commerce dataset.
+* Addressing _14_ key business questions to provide strategic insights to Olist.
+* Visualizations to communicate findings effectively.

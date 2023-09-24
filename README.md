@@ -46,3 +46,17 @@ __Highlights__
 * Thorough exploration, data cleansing, and analysis of Olist's comprehensive e-commerce dataset.
 * Addressing _14_ key business questions to provide strategic insights to Olist.
 * Visualizations to communicate findings effectively.
+
+## Virtual Internship: Data Visualisation-Empowering Business with Effective Insights
+
+This project encapsulates my immersive journey with Forage, where I embarked on a virtual internship in data visualization. It was an opportunity to simulate a real job role and gain hands-on experience guided by industry professionals.
+
+__Key Tasks__
+Task 1: Framing the Business Scenario
+Task 2: Choosing the Right Visuals
+Task 3: Creating Effective Visuals
+Task 4: Communicating Insights and Analysis
+
+__TOOLS__
+* Power Query
+* Power BI

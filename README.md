@@ -52,10 +52,10 @@ __Highlights__
 This project encapsulates my immersive journey with Forage, where I embarked on a virtual internship in data visualization. It was an opportunity to simulate a real job role and gain hands-on experience guided by industry professionals.
 
 __Key Tasks__
-Task 1: Framing the Business Scenario
-Task 2: Choosing the Right Visuals
-Task 3: Creating Effective Visuals
-Task 4: Communicating Insights and Analysis
+* Task 1: Framing the Business Scenario
+* Task 2: Choosing the Right Visuals
+* Task 3: Creating Effective Visuals
+* Task 4: Communicating Insights and Analysis
 
 __TOOLS__
 * Power Query

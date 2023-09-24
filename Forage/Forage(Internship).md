@@ -20,6 +20,9 @@ Visualizations are the bridge between raw data and actionable insights. Task 2 p
 
 With a strong foundation, I moved on to the next phase: creating visuals. Armed with Power BI, I cleaned the data and created visuals to answer specific questions. The importance of data cleaning became clear as I worked to ensure data accuracy and consistency. The visuals I crafted were intended to aid business leaders in making informed decisions, and precision was key.
 
+![Screenshot 2023-09-24 135158](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/352bdd0f-7955-47b4-892c-0c8fc18b032b)
+
+
 **Task 4** — _Communicating Insights and Analysis_
 
 The culmination of this journey was a presentation to the CEO and CMO. This was not merely a recitation of charts and graphs; it was a story of how data could inform decisions. I walked them through my entire process, from data cleaning to the insights gained.

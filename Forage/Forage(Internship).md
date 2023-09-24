@@ -24,7 +24,7 @@ The culmination of this journey was a presentation to the CEO and CMO. This was 
 
 **A Reflection on Growth**
 
-![gs](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/8e59abe5-ad47-4381-bfa5-385561a3c40b)
+![Screenshot 2023-09-20 113202](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/b172d264-8cb1-4d66-a723-d028183b8e6f)
 
 As I reflect on my virtual internship with Forage, I am filled with gratitude for the opportunity. I have not only acquired technical skills but also developed the ability to think strategically, communicate effectively, and solve real-world business challenges.
 

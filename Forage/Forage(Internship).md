@@ -6,6 +6,8 @@
 
 The journey began when I stumbled upon an intriguing opportunity by Forage — a chance to simulate a job role in data visualization. The promise of hands-on experience, guided by industry professionals, was too tempting to resist. I decided to dive in, and little did I know that this virtual internship would be a transformative experience.
 
+**Tasks and Learnings**
+
 **Task 1** — _Framing the Business Scenario_
 
 The first task was all about thinking like a business leader. I was tasked with anticipating the questions that a CEO and CMO might ask about their online retail store’s performance. The objective? To provide valuable insights for strategic planning. It was a challenge to balance quantitative and qualitative aspects in crafting those essential questions.

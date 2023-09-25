@@ -8,7 +8,7 @@ This project was undertaken as part of a month-long data analytics challenge wit
 
 __Key Points__
 
-* __Data Source__: Kaggle
+* __Data Source__: [Kaggle](https://www.kaggle.com/datasets/yagunnersya/fifa-21-messy-raw-dataset-for-cleaning-exploring)
 * __Data Cleaning Tool__: Microsoft Excel with Power Query
 
 __Highlights__
@@ -21,7 +21,7 @@ This project was completed as part of my Google Data Analytics Professional Cert
 
 __Key Points__
 
-* __Data Source:__ Kaggle
+* __Data Source:__ [Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit)
 * __Programming Language:__ R
 
 __Highlights__
@@ -36,7 +36,7 @@ This project is the culmination of my Google Data Analytics Professional Certifi
 
 __Key Points__
 
-* __Data Source:__ Kaggle
+* __Data Source:__ [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 * __Programming Language:__ SQL, R
 * __Visualization:__ Symphony of R programming
 * __Tools:__ Microsoft SQL Server, Excel, Power Query

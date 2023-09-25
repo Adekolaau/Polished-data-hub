@@ -12,7 +12,7 @@ The primary objective of this analysis is to provide Olist with insights that ca
 
 ## DATA SOURCES
 
-The core dataset used in this analysis is the Olist sales dataset, sourced from Kaggle. This dataset spans from January 2017 to August 2018 and encompasses a comprehensive array of information. It includes details about orders, items, products, payments, customer and seller identification, as well as reviews. Supplementary information regarding sellers, customer behavior, and demographics complements the dataset.
+The core dataset used in this analysis is the Olist sales dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). This dataset spans from January 2017 to August 2018 and encompasses a comprehensive array of information. It includes details about orders, items, products, payments, customer and seller identification, as well as reviews. Supplementary information regarding sellers, customer behavior, and demographics complements the dataset.
 
 Moreover, external sources, such as industry reports and market trends related to the Brazilian e-commerce sector, could be referenced for contextualization and benchmarking purposes.
 

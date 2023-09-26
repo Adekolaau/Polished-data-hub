@@ -3,7 +3,7 @@ Google Capstone Project - Bellabeat
 
 # Bellabeat Data Analysis
 
-## Introduction
+**Introduction**
 
 In this analysis, I will explore and visualize the Bellabeat datasets to
 gain insights into smart device usage and its relationship with
@@ -13,7 +13,7 @@ information. I will focus on data cleaning, exploration, and
 visualization to address specific business questions and provide
 valuable insights for Bellabeat.
 
-## Installing and Loading Packages
+**Installing and Loading Packages**
 
 I will start by installing and loading necessary packages for data
 manipulation and visualization.
@@ -71,7 +71,7 @@ library(here)
 
     ## here() starts at /cloud/project
 
-## Loading datasets
+**Loading datasets**
 
 Next, I will load the datasets required for analysis:
 
@@ -84,11 +84,11 @@ sleep_day <- read.csv("/cloud/project/bellabeat/sleepDay_merged.csv")
 weight_loginfo <- read.csv("/cloud/project/bellabeat/weightLogInfo_merged.csv")
 ```
 
-## Data Cleaning and Exploration
+**Data Cleaning and Exploration**
 
 I will clean and explore each dataset to prepare them for analysis.
 
-### dailyActivity_merged Dataset
+**_dailyActivity_merged Dataset_**
 
 I used the clean_names function to ensure consistency in the dataset,
 then i converted the ‘activity_date’ column to date datatype instead of
@@ -139,7 +139,7 @@ daily_activity %>%
 
     ## [1] 33
 
-### hourlyCalories_merged Dataset
+**_hourlyCalories_merged Dataset_**
 
 I used the clean_names function to ensure consistency in the dataset,
 then i converted the ‘activity_hour’ column to POSIXct datatype instead
@@ -178,7 +178,7 @@ hourly_calories %>%
 
     ## [1] 33
 
-### hourlyIntensities_merged Dataset
+**_hourlyIntensities_merged Dataset_**
 
 I used the clean_names function to ensure consistency in the dataset,
 then i converted the ‘activity_hour’ column to POSIXct datatype instead
@@ -218,7 +218,7 @@ hourly_intensities %>%
 
     ## [1] 33
 
-### Merging hourly_intensities and hourly_calories datasets
+**_Merging hourly_intensities and hourly_calories datasets_**
 
 The number of unique users (id) in dataset ‘hourly_intensities’
 corresponds with that of ‘hourly_calories’, therefore, I will perform a
@@ -241,7 +241,7 @@ glimpse(intensities_calories)
     ## $ average_intensity <dbl> 0.333333, 0.133333, 0.116667, 0.000000, 0.000000, 0.…
     ## $ calories          <int> 81, 61, 59, 47, 48, 48, 48, 47, 68, 141, 99, 76, 73,…
 
-### hourlySteps_merged Dataset
+**_hourlySteps_merged Dataset_**
 
 I used the clean_names function to ensure consistency in the dataset,
 then i converted the ‘activity_hour’ column to POSIXct datatype instead
@@ -280,7 +280,7 @@ hourly_steps %>%
 
     ## [1] 33
 
-### Merging intensities_calories and hourly_steps datasets
+**_Merging intensities_calories and hourly_steps datasets_**
 
 The number of unique users (id) in dataset ‘hourly_steps’ corresponds to
 that of dataset ‘intensities_calories’, therefore I will perform a full
@@ -351,7 +351,7 @@ sum(duplicated(intensities_calories_steps))
 
     ## [1] 0
 
-### sleepDay_merged Dataset
+**_sleepDay_merged Dataset_**
 
 I used the clean_names function to ensure consistency in the dataset,
 then i converted the ‘sleep_day’ column to POSIXct datatype instead of
@@ -425,7 +425,7 @@ sleep_day %>%
 
     ## [1] 24
 
-### Merging daily_activity and sleep_day datasets
+**_Merging daily_activity and sleep_day datasets_**
 
 The number of unique users (id) in datasets ‘daily_activity’ and
 ‘sleep_day’ is 33 and 22 respectively, so a full join will be performed
@@ -519,7 +519,7 @@ weight_loginfo %>%
 
     ## [1] 8
 
-## Summary Statistics
+**_Summary Statistics_**
 
 Let’s summarize the datasets before visualization.
 
@@ -618,12 +618,12 @@ summary(weight_loginfo)
     ##  Max.   :1.463e+12  
     ## 
 
-## Visualization
+**_Visualization_**
 
 Now, I will visualize the data to gain insights and answer specific
 business questions.
 
-### Intensities_calories_steps Dataset
+**_Intensities_calories_steps Dataset_**
 
 ###### Relationship between “step_total” and “calories”
 
@@ -641,7 +641,7 @@ ggplot(data = intensities_calories_steps, aes(x = step_total, y = calories)) +
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](Google-Capstone-Project_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![Screenshot 2023-09-26 142242](https://github.com/Adekolaau/Cil_Academy/assets/128713981/bd1e910c-3c7b-403d-98bc-847b0cb23a6c)
 
 - Based on the visualization of the data, it is evident that there is a
   positive correlation between the number of steps taken and the
@@ -673,7 +673,7 @@ ggplot(int_cal_stp_new, aes(x = activity_time, y = mean_total_int)) +
     ## Warning in geom_histogram(stat = "identity", fill = "blue"): Ignoring unknown
     ## parameters: `binwidth`, `bins`, and `pad`
 
-![](Google-Capstone-Project_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![Screenshot 2023-09-26 142421](https://github.com/Adekolaau/Cil_Academy/assets/128713981/e2506701-f815-4cd3-a728-c041ba64c07b)
 
 Based on the visualization of the data, several key observations can be
 made regarding people’s activity patterns:
@@ -691,7 +691,7 @@ made regarding people’s activity patterns:
   a prime opportunity for the Bellabeat app to remind and motivate its
   users to engage in physical activities.
 
-### Activity_sleep Dataset
+**_Activity_sleep Dataset_**
 
 ###### Relationship between “total_minute_asleep” and “total_minute_in_bed”
 
@@ -707,7 +707,7 @@ ggplot(activity_sleep, aes(x = total_minutes_asleep, y = total_time_in_bed)) +
         plot.subtitle = element_text(hjust = 0.4))
 ```
 
-![](Google-Capstone-Project_files/figure-gfm/plot_1-1.png)<!-- -->
+![Screenshot 2023-09-26 142527](https://github.com/Adekolaau/Cil_Academy/assets/128713981/67a96aa1-b53d-4d22-a976-e8d14b28f47a)
 
 - From the scatter plot visualization, it is evident that there is a
   positive linear correlation between the time spent in bed and sleep
@@ -732,7 +732,7 @@ ggplot(data = activity_sleep, aes(x = total_minutes_asleep, y = sedentary_minute
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](Google-Capstone-Project_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![Screenshot 2023-09-26 142713](https://github.com/Adekolaau/Cil_Academy/assets/128713981/a69a2998-b1cd-4503-83a5-219897901285)
 
 - From this visualization, it can be observed that there is a negative
   correlation between sedentary minutes and total minutes asleep. A
@@ -745,7 +745,7 @@ duration of sleep. In other words, individuals who have longer periods
 of sedentary behavior may experience a decrease in their total sleep
 duration.
 
-## Summary of Recommendations from Visualizations:
+**_Summary of Recommendations from Visualizations:_**
 
 ### Relationship between “average_intensity” versus “activity_hour”
 

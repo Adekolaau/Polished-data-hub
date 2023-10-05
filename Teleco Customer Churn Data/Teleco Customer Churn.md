@@ -208,3 +208,5 @@ The journey to reducing customer churn and bolstering retention begins with info
 12. **_Improve Payment Options:_** Address issues related to electronic check payments, offering alternatives to improve customer satisfaction and retention.
 
 In summary, the company needs to address the high churn rate as a top priority. This can be achieved through a multi-faceted approach, including improving customer education about services, promoting long-term contracts, exploring the reasons behind paperless billing churn, and enhancing payment options, especially for electronic checks. Additionally, creating targeted retention strategies for non-senior citizens and addressing the concerns of customers with fiber optic internet and phone service can help mitigate churn and boost revenue.
+
+Thank you

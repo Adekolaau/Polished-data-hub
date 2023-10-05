@@ -60,3 +60,17 @@ __Key Tasks__
 __TOOLS__
 * Power Query
 * Power BI
+
+## Project 4: TELECO CUSTOMER CHURN DATA
+
+This project marks the crowning achievement of my endeavor to harness the power of data analytics in the dynamic landscape of the telecommunications industry. As part of my journey, I've undertaken a comprehensive analysis of the Telecommunication Customer Churn Dataset, to unlock the secrets behind customer retention for a telecommunication company facing a significant challenge – a high churn rate.
+
+__Key Points__
+
+* __Data Source:__ [Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn/data)
+* __Tools:__ Power Query, Power BI
+
+__Highlights__
+
+* Thorough exploration, data cleansing, analysis, generating insights and practical recommendations of Teleco customer churn dataset.
+* Creation of dashboard to communicate findings effectively.

@@ -6,8 +6,7 @@ SQL is a powerful tool for managing and querying data, and I believe this challe
 
 Let's dive in and make the most of this challenge together! 🚀
 
-**Day 1**
--- Using the Movie Data, write a query to show the titles and movies released in 2017 whose vote count is more than 15 and runtime is more than 100
+**Day 1** -- Using the Movie Data, write a query to show the titles and movies released in 2017 whose vote count is more than 15 and runtime is more than 100
 
 SELECT original_title, release_date
 
@@ -34,8 +33,7 @@ AND runtime > 100;
 - Use the AND operator to combine multiple conditions, ensuring that all requirements are met.
 - Filter movies with a "vote_count" greater than 15 and a "runtime" greater than 100 minutes.
 
-**Day 2**
--- Using the Pizza Data, write a query to show how many pizzas were ordered.
+**Day 2** -- Using the Pizza Data, write a query to show how many pizzas were ordered.
 
 SELECT COUNT(*) AS total_pizzas_ordered
 
@@ -43,7 +41,7 @@ FROM [Pizza Data].[dbo].[customer_orders];
 
 ![Screenshot 2023-10-10 125702](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/0606c4b6-9024-496a-bc5f-c5bf207022b3)
 
-**_APPROACH:_**
+**_Approach:_**
 
 The pizza_id column, represent the 2 type of pizza which is available, so for every order (quantity ordered), it is counted as 1, even if a single customer ordered for another of the same pizza or 
 a different pizza, it is represented in a different row with the same customer_id, so in order to know how many pizzas were ordered, the best approach is to count the total rows available. 

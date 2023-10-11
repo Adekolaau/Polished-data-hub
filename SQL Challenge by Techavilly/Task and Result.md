@@ -43,7 +43,28 @@ FROM [Pizza Data].[dbo].[customer_orders];
 
 **_Approach:_**
 
-The pizza_id column, represent the 2 type of pizza which is available, so for every order (quantity ordered), it is counted as 1, even if a single customer ordered for another of the same pizza or 
+The pizza_id column, represent the 2 type of pizza which is available, so for every order (quantity ordered), it is counted as 1, even if a single customer orders another of the same pizza or 
 a different pizza, it is represented in a different row with the same customer_id, so in order to know how many pizzas were ordered, the best approach is to count the total rows available. 
 
+**Day 3** -- Write a query to show how many successful orders were delivered by each runner.
 
+SELECT r.runner_id,
+	
+ COUNT(ro.order_id) AS successful_orders
+
+FROM [Pizza Data].[dbo].[runners] AS r
+	
+ INNER JOIN [Pizza Data].[dbo].[runner_orders] AS ro ON r.runner_id = ro.runner_id
+
+WHERE ro.cancellation IS NULL
+
+GROUP BY r.runner_id
+
+ORDER BY r.runner_id;
+
+![Screenshot 2023-10-11 165946](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/193680cd-c2c4-4dd5-8112-0112e8b9fb7a)
+
+**_Approach:_**
+
+I started by using SQL JOIN statements to bring together the relevant data from the "runners" and "runner_orders" tables. This is essential for linking the information needed to determine the number of successful orders for each runner. Next, I applied a WHERE clause to filter the combined data, ensuring that only successful orders are considered. This filter checks for rows where the "cancellation" column in the "runner_orders" table is NULL, effectively excluding any canceled or failed orders from the count. I employed the SQL GROUP BY clause to group the filtered data by "runner_id". With the data grouped by "runner_id," I used the COUNT function to calculate the 
+number of successful orders for each runner. This count provides the specific metric we're interested in.

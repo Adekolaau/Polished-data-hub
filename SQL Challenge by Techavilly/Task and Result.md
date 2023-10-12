@@ -56,15 +56,15 @@ a different bread, it is represented in a different row with the same customer_i
 
 **Day 3** -- Write a query to show how many successful orders were delivered by each runner.
 
-SELECT r.runner_id,
-	
+SELECT 
+
+	r.runner_id,
 	COUNT(ro.order_id) AS successful_orders
 
 FROM 
 	
  	[Bread Data].[dbo].[runners] AS r
-	
- 	INNER JOIN [Bread Data].[dbo].[runner_orders] AS ro ON r.runner_id = ro.runner_id
+	INNER JOIN [Bread Data].[dbo].[runner_orders] AS ro ON r.runner_id = ro.runner_id
 
 WHERE 
 	
@@ -98,8 +98,7 @@ FROM
 WHERE 
 	
  	(original_language = 'en' OR original_language = 'fr') 
-	
- 	AND budget > 1000000
+	AND budget > 1000000
 
 ![Screenshot 2023-10-12 134750](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/ca39e285-19c1-429c-a29c-346c2ef6b8e6)
 

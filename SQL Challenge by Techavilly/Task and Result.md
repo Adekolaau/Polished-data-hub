@@ -8,15 +8,19 @@ Let's dive in and make the most of this challenge together! 🚀
 
 **Day 1** -- Using the Movie Data, write a query to show the titles and movies released in 2017 whose vote count is more than 15 and runtime is more than 100
 
-SELECT original_title, release_date
+SELECT 
 
-FROM [Movies].[dbo].[Movie Data]
+	original_title, release_date
 
-WHERE YEAR(release_date) = 2017
+FROM 
 
-AND vote_count > 15
+	[Movies].[dbo].[Movie Data]
 
-AND runtime > 100;
+WHERE 
+
+	YEAR(release_date) = 2017
+	AND vote_count > 15
+	AND runtime > 100;
 
 ![Screenshot 2023-10-09 155326](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/f6411548-a779-4a24-abf3-a5e6852fbda3)
 
@@ -35,9 +39,13 @@ AND runtime > 100;
 
 **Day 2** -- Using the Bread Data, write a query to show how many breads were ordered.
 
-SELECT COUNT(*) AS total_bread_ordered
+SELECT 
 
-FROM [Bread Data].[dbo].[customer_orders];
+	COUNT(*) AS total_bread_ordered
+
+FROM 
+	
+ 	[Bread Data].[dbo].[customer_orders];
 
 ![Screenshot 2023-10-11 175032](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/e1b8604d-e932-480d-8f63-3b8cabab1c34)
 
@@ -50,17 +58,25 @@ a different bread, it is represented in a different row with the same customer_i
 
 SELECT r.runner_id,
 	
- COUNT(ro.order_id) AS successful_orders
+	COUNT(ro.order_id) AS successful_orders
 
-FROM [Bread Data].[dbo].[runners] AS r
+FROM 
 	
- INNER JOIN [Bread Data].[dbo].[runner_orders] AS ro ON r.runner_id = ro.runner_id
+ 	[Bread Data].[dbo].[runners] AS r
+	
+ 	INNER JOIN [Bread Data].[dbo].[runner_orders] AS ro ON r.runner_id = ro.runner_id
 
-WHERE ro.cancellation IS NULL
+WHERE 
+	
+ 	ro.cancellation IS NULL
 
-GROUP BY r.runner_id
+GROUP BY 
+	
+ 	r.runner_id
 
-ORDER BY r.runner_id;
+ORDER BY 
+
+	r.runner_id;
 
 ![Screenshot 2023-10-11 175606](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/f259f377-5a40-4d01-b281-49618f9329d7)
 

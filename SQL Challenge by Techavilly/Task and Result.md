@@ -68,3 +68,28 @@ ORDER BY r.runner_id;
 
 I started by using SQL JOIN statements to bring together the relevant data from the "runners" and "runner_orders" tables. This is essential for linking the information needed to determine the number of successful orders for each runner. Next, I applied a WHERE clause to filter the combined data, ensuring that only successful orders are considered. This filter checks for rows where the "cancellation" column in the "runner_orders" table is NULL, effectively excluding any canceled or failed orders from the count. I employed the SQL GROUP BY clause to group the filtered data by "runner_id". With the data grouped by "runner_id," I used the COUNT function to calculate the 
 number of successful orders for each runner. This count provides the specific metric we're interested in.
+
+**Day 4** -- Using the Movie Data, write a query to show the top 10 movie titles whose language is English and French and the budget is more than 1,000,000
+
+SELECT TOP 10 
+	
+ 	title
+
+FROM 
+
+ 	[Movies].[dbo].[Movie Data]
+
+WHERE 
+	
+ 	(original_language = 'en' OR original_language = 'fr') 
+	
+ 	AND budget > 1000000
+
+![Screenshot 2023-10-12 134750](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/ca39e285-19c1-429c-a29c-346c2ef6b8e6)
+
+**_Approach:_**
+
+1. I began by using the SELECT statement to specify that I want to capture the top 10 movie titles.
+2. Then, I used the FROM statement to specify the data source, which is the "Movie Data" table within the "Movies" database.
+3. To filter the results, I employed the WHERE clause to ensure that the "original_language" is either English ('en') or French ('fr') and that the budget is greater than 1,000,000.
+4. Finally, I used the ORDER BY clause to sort the results by budget in descending order, ensuring that the movies with the highest budgets appear at the top of the list.

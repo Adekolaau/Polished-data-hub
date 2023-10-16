@@ -168,7 +168,8 @@ FROM
 	[Movies].[dbo].[Orders]
 
 WHERE
-	city IN ('Dallas', 'Los Angeles', 'Seattle', 'Madison')
+	
+ 	city IN ('Dallas', 'Los Angeles', 'Seattle', 'Madison')
 
 GROUP BY
 
@@ -211,13 +212,13 @@ SELECT TOP 1
     	category AS Category,
     	total_sales AS TotalSales
 
-	FROM
+FROM
     
-    		CustomerSales
+    	CustomerSales
 
-	ORDER BY
+ORDER BY
     
-    		total_sales DESC;
+    	total_sales DESC;
 
 ![Screenshot 2023-10-16 104724](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/b2e730a0-84eb-4d3d-a942-132182f1214c)
 

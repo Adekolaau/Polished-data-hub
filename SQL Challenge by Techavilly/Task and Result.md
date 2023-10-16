@@ -108,3 +108,120 @@ WHERE
 2. Then, I used the FROM statement to specify the data source, which is the "Movie Data" table within the "Movies" database.
 3. To filter the results, I employed the WHERE clause to ensure that the "original_language" is either English ('en') or French ('fr') and that the budget is greater than 1,000,000.
 4. Finally, I used the ORDER BY clause to sort the results by budget in descending order, ensuring that the movies with the highest budgets appear at the top of the list.
+
+**Day 5** -- Using the Bread Data, write a query to show the number of each type of bread delivered.
+
+SELECT
+	
+ 	BN.bread_name AS Bread_Name,
+	COUNT(RO.order_id) AS bread_deliveries
+
+FROM
+	
+ 	[Bread Data].[dbo].[customer_orders] AS CO
+
+JOIN
+	
+ 	[Bread Data].[dbo].[bread_names] AS BN ON CO.bread_id = BN.bread_id
+
+LEFT JOIN
+	
+ 	[Bread Data].[dbo].[runner_orders] AS RO ON CO.order_id = RO.order_id
+
+WHERE
+	
+ 	RO.cancellation IS NULL
+
+GROUP BY
+	
+ 	BN.bread_name
+
+ORDER BY
+
+	bread_deliveries DESC;
+
+![Screenshot 2023-10-13 100123](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/38f16eeb-f794-4add-b828-84ba3000437b)
+
+**Approach:**
+1. I SELECT the bread names from the "bread_names" table (aliased as "BN").
+2. I use a JOIN operation to combine the "customer_orders" and "bread_names" tables
+based on the "bread_id" column.
+3. I then use a LEFT JOIN operation to combine the result with the "runner_orders" 
+table based on the "order_id" column. This was used to filter out canceled orders.
+4. I filtered the results to include only orders with a NULL cancellation status 
+in the "runner_orders" table, which indicates that the order was delivered.
+5. I group the results by bread name.
+6. I count the number of deliveries for each bread type.
+7. Finally, I order the results by the number of deliveries in descending order.
+
+**Bonus** -- 🚀 Weekends are for bonus questions, and here's how I tackled my bonus question for the #30Daysqlchallenge
+
+Question: The Briggs company wants to ship some of their products to customers in selected cities but they want to know the average days it’ll take to deliver those items to Dallas, LOS Angeles, Seattle, and Madison. Using sample superstore data, write a query to show the average delivery days to those cities. Only show the city and average delivery days columns in your output.
+
+SELECT
+    
+	city AS City,
+	AVG(DATEDIFF(day, order_date, ship_date)) AS AverageDeliveryDays
+
+FROM
+    
+	[Movies].[dbo].[Orders]
+
+WHERE
+	city IN ('Dallas', 'Los Angeles', 'Seattle', 'Madison')
+
+GROUP BY
+
+	city
+
+ORDER BY
+
+	city;
+
+ ![Screenshot 2023-10-14 111502](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/9fb0956f-a6f0-4df9-a03e-e33c67a3b780)
+
+**Approach:**
+
+1. I SELECTed the "city" column, aliasing it as "City," and calculated the average delivery days using the AVG function along with DATEDIFF to find the difference in days between the "order_date" and "ship_date."
+2. To focus solely on the specified cities, I employed the WHERE clause with the IN operator.
+3. Grouping my results by city, I harnessed the power of the GROUP BY clause.
+4. To keep things organized, I ordered the results in ascending order by city using the ORDER BY clause.
+
+**Day 8** -- It's getting to the end of the year and the Briggs company wants to reward the customer who made the highest sales ever. Using the sample superstore, write a query to help the company identify this customer and category of business driving the sales. Let your output show the customer Name, the Category and the total sales. Round the total sales to the nearest whole number.
+
+WITH CustomerSales AS (
+	
+ 	SELECT
+        	customer_name,
+        	category,
+        	ROUND(SUM(sales), 0) AS total_sales
+    	FROM
+        	
+	 	[Movies].[dbo].[Orders]
+    
+    	GROUP BY
+        	
+	 	customer_name, category
+
+)
+
+SELECT TOP 1
+    
+    	customer_name AS CustomerName,
+    	category AS Category,
+    	total_sales AS TotalSales
+
+	FROM
+    
+    		CustomerSales
+
+	ORDER BY
+    
+    		total_sales DESC;
+
+![Screenshot 2023-10-16 104724](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/b2e730a0-84eb-4d3d-a942-132182f1214c)
+
+**Approach:**
+
+1. To identify the customer and category responsible for the highest sales, I harnessed the power of SQL with a Common Table Expression (CTE) named "CustomerSales." This CTE is designed to aggregate the data from the "Orders" table by grouping it according to "customer_name" and "category." Here, we calculate the total sales for each customer and category. Notably, I ensured that the total sales are rounded to the nearest whole number using the ROUND function.
+2. In the core part of the query, I focused on selecting just one row – the customer with the highest total sales. Achieving this entailed sorting the results in descending order of total sales using the ORDER BY clause. The top 1 row in this ordered list represents the customer and category driving the maximum sales.

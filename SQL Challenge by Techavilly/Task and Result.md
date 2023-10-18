@@ -240,10 +240,12 @@ FROM
     	[Movies].[dbo].[Orders]
 
 GROUP BY
-    	category
+    	
+     	category
 
 ORDER BY
-    	PercentageContribution DESC;
+    	
+     	PercentageContribution DESC;
 
 ![Screenshot 2023-10-17 161712](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/81cde191-00fa-4e26-b89c-6f659157819c)
 
@@ -267,10 +269,12 @@ FROM
     	[Movies].[dbo].[Orders]
 
 GROUP BY
-    	sub_category
+    	
+     	sub_category
 
 ORDER BY
-    	TotalSales DESC;
+    	
+     	TotalSales DESC;
 
 ![Screenshot 2023-10-18 093927](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/bf5ba5dd-5de4-41ec-96af-3b99fd98cd1c)
 

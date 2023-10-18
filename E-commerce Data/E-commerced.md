@@ -579,90 +579,90 @@ ANS: To answer this question, I performed the following steps:
 
 SELECT 
 
-  payment_type, COUNT(*) AS payment_count
+      payment_type, COUNT(*) AS payment_count
 
 FROM 
 
-  [olist].[dbo].[olist_order_payments_dataset]
+      [olist].[dbo].[olist_order_payments_dataset]
 
 GROUP BY 
 
-  payment_type
+      payment_type
 
 ORDER BY 
 
-  payment_count DESC;
+      payment_count DESC;
 
 -- Analyze Payment Methods by Product Category:
 
 SELECT 
 
-  pc.product_category_name_english AS category_name, 
-  op.payment_type, COUNT(*) AS payment_count
+      pc.product_category_name_english AS category_name, 
+      op.payment_type, COUNT(*) AS payment_count
 
 FROM 
 
-  [olist].[dbo].[olist_order_payments_dataset] AS op
+      [olist].[dbo].[olist_order_payments_dataset] AS op
 
 INNER JOIN 
 
-  [olist].[dbo].[olist_orders_dataset] AS o ON op.order_id = o.order_id
+      [olist].[dbo].[olist_orders_dataset] AS o ON op.order_id = o.order_id
 
 INNER JOIN 
 
-  [olist].[dbo].[olist_order_items_dataset] AS oi ON o.order_id = oi.order_id
+      [olist].[dbo].[olist_order_items_dataset] AS oi ON o.order_id = oi.order_id
 
 INNER JOIN 
 
-  [olist].[dbo].[olist_products_dataset] AS p ON oi.product_id = p.product_id
+      [olist].[dbo].[olist_products_dataset] AS p ON oi.product_id = p.product_id
 
 INNER JOIN 
 
-  [olist].[dbo].[product_category_name_translation] AS pc ON p.product_category_name = pc.product_category_name
+      [olist].[dbo].[product_category_name_translation] AS pc ON p.product_category_name = pc.product_category_name
 
 WHERE 
 
-  order_status <> 'canceled' AND order_approved_at IS NOT NULL
+      order_status <> 'canceled' AND order_approved_at IS NOT NULL
 
 GROUP BY 
 
-  pc.product_category_name_english, op.payment_type
+      pc.product_category_name_english, op.payment_type
 
 ORDER BY 
 
-  category_name, payment_count DESC;
+      category_name, payment_count DESC;
 
 -- Analyze Payment Methods by Geographic Region:
 
 SELECT 
 
-  c.customer_city AS city, 
-  op.payment_type, 
-  COUNT(*) AS payment_count
+      c.customer_city AS city, 
+      op.payment_type, 
+      COUNT(*) AS payment_count
 
 FROM 
 
-  [olist].[dbo].[olist_order_payments_dataset] AS op
+      [olist].[dbo].[olist_order_payments_dataset] AS op
 
 INNER JOIN 
 
-  [olist].[dbo].[olist_orders_dataset] AS o ON op.order_id = o.order_id
+      [olist].[dbo].[olist_orders_dataset] AS o ON op.order_id = o.order_id
 
 INNER JOIN 
 
-  [olist].[dbo].[olist_customers_dataset] AS c ON o.customer_id = c.customer_id
+      [olist].[dbo].[olist_customers_dataset] AS c ON o.customer_id = c.customer_id
 
 WHERE 
 
-  order_status <> 'canceled' AND order_approved_at IS NOT NULL
+      order_status <> 'canceled' AND order_approved_at IS NOT NULL
 
 GROUP BY 
 
-  c.customer_city, op.payment_type
+      c.customer_city, op.payment_type
 
 ORDER BY 
 
-  city, payment_count DESC;
+      city, payment_count DESC;
 
 Identify Common Payment Methods:
 
@@ -692,50 +692,50 @@ WITH Profitability AS (
 
 SELECT
 
-  pc.product_category_name_english,
-  SUM(op.payment_value) AS total_revenue,
-  SUM(oi.price + oi.freight_value) AS total_cost
+      pc.product_category_name_english,
+      SUM(op.payment_value) AS total_revenue,
+      SUM(oi.price + oi.freight_value) AS total_cost
 
 FROM
 
-  [olist].[dbo].[olist_order_items_dataset] AS oi
+      [olist].[dbo].[olist_order_items_dataset] AS oi
 
 INNER JOIN 
 
-  [olist].[dbo].[olist_products_dataset] AS p ON oi.product_id = p.product_id
+      [olist].[dbo].[olist_products_dataset] AS p ON oi.product_id = p.product_id
 
 INNER JOIN 
 
-  [olist].[dbo].[olist_order_payments_dataset] AS op ON oi.order_id = op.order_id
+      [olist].[dbo].[olist_order_payments_dataset] AS op ON oi.order_id = op.order_id
 
 INNER JOIN 
 
-  [olist].[dbo].[product_category_name_translation] AS pc ON p.product_category_name = pc.product_category_name
+      [olist].[dbo].[product_category_name_translation] AS pc ON p.product_category_name = pc.product_category_name
 
 GROUP BY
 
-  pc.product_category_name_english
+      pc.product_category_name_english
 
 )
 
 SELECT
 
-  product_category_name_english,
-  ROUND(SUM(total_revenue), 2) AS total_revenue,
-  ROUND(SUM(total_cost), 2) AS total_cost,
-  ROUND((SUM(total_revenue) - SUM(total_cost)) / SUM(total_revenue) \* 100, 2) AS profit_margin
+      product_category_name_english,
+      ROUND(SUM(total_revenue), 2) AS total_revenue,
+      ROUND(SUM(total_cost), 2) AS total_cost,
+      ROUND((SUM(total_revenue) - SUM(total_cost)) / SUM(total_revenue) \* 100, 2) AS profit_margin
 
 FROM
 
-  Profitability
+      Profitability
 
 GROUP BY
 
-  product_category_name_english
+      product_category_name_english
 
 ORDER BY
 
-  profit_margin DESC;
+      profit_margin DESC;
 
 ![IMG 085](https://miro.medium.com/v2/resize:fit:640/format:webp/1*TolYgPg8KJFNuIn20MuHLw.png)
 

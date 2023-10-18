@@ -5,18 +5,11 @@ Google Capstone Project - Bellabeat
 
 **Introduction**
 
-In this analysis, I will explore and visualize the Bellabeat datasets to
-gain insights into smart device usage and its relationship with
-Bellabeat’s products. The datasets include daily activity, hourly
-calories, hourly intensities, hourly steps, sleep day, and weight log
-information. I will focus on data cleaning, exploration, and
-visualization to address specific business questions and provide
-valuable insights for Bellabeat.
+In this analysis, I explored and visualized the Bellabeat datasets to gain insights into smart device usage and its relationship with Bellabeat’s products. The datasets included daily activity, hourly calories, hourly intensities, hourly steps, sleep day, and weight log information. I focused on data cleaning, exploration, and visualization to address specific business questions and provide valuable insights for Bellabeat.
 
 **Installing and Loading Packages**
 
-I will start by installing and loading necessary packages for data
-manipulation and visualization.
+I started by installing and loading the necessary packages for data manipulation and visualization.
 
 ``` r
 install.packages("tidyverse")
@@ -73,7 +66,7 @@ library(here)
 
 **Loading datasets**
 
-Next, I will load the datasets required for analysis:
+Following that, I loaded the datasets required for analysis:
 
 ``` r
 daily_activity <- read.csv("/cloud/project/bellabeat/dailyActivity_merged.csv")
@@ -86,13 +79,11 @@ weight_loginfo <- read.csv("/cloud/project/bellabeat/weightLogInfo_merged.csv")
 
 **Data Cleaning and Exploration**
 
-I will clean and explore each dataset to prepare them for analysis.
+I cleaned and explored each dataset to prepare them for analysis.
 
 **_dailyActivity_merged Dataset_**
 
-I used the clean_names function to ensure consistency in the dataset,
-then i converted the ‘activity_date’ column to date datatype instead of
-character datatype.
+I employed the clean_names function to ensure consistency in the dataset, then I converted the ‘activity_date’ column to a date datatype instead of a character datatype.
 
 ``` r
 daily_activity <- daily_activity %>%
@@ -121,7 +112,7 @@ glimpse(daily_activity)
     ## $ sedentary_minutes          <int> 728, 776, 1218, 726, 773, 539, 1149, 775, 8…
     ## $ calories                   <int> 1985, 1797, 1776, 1745, 1863, 1728, 1921, 2…
 
-I checked for duplicate in the dataset
+I checked for duplicates in the dataset
 
 ``` r
 sum(duplicated(daily_activity))
@@ -141,9 +132,7 @@ daily_activity %>%
 
 **_hourlyCalories_merged Dataset_**
 
-I used the clean_names function to ensure consistency in the dataset,
-then i converted the ‘activity_hour’ column to POSIXct datatype instead
-of character datatype.
+I used the clean_names function to ensure consistency in the dataset, then I converted the ‘activity_hour’ column to a POSIXct datatype instead of a character datatype.
 
 ``` r
 hourly_calories <- hourly_calories %>%
@@ -160,7 +149,7 @@ glimpse(hourly_calories)
     ## $ activity_hour <dttm> 2016-04-12 00:00:00, 2016-04-12 01:00:00, 2016-04-12 02…
     ## $ calories      <int> 81, 61, 59, 47, 48, 48, 48, 47, 68, 141, 99, 76, 73, 66,…
 
-I checked for duplicate in the dataset
+I checked for duplicates in the dataset
 
 ``` r
 sum(duplicated(hourly_calories))
@@ -180,9 +169,7 @@ hourly_calories %>%
 
 **_hourlyIntensities_merged Dataset_**
 
-I used the clean_names function to ensure consistency in the dataset,
-then i converted the ‘activity_hour’ column to POSIXct datatype instead
-of character datatype.
+I used the clean_names function to ensure consistency in the dataset, then I converted the ‘activity_hour’ column to a POSIXct datatype instead of a character datatype.
 
 ``` r
 hourly_intensities <- hourly_intensities %>%
@@ -200,7 +187,7 @@ glimpse(hourly_intensities)
     ## $ total_intensity   <int> 20, 8, 7, 0, 0, 0, 0, 0, 13, 30, 29, 12, 11, 6, 36, …
     ## $ average_intensity <dbl> 0.333333, 0.133333, 0.116667, 0.000000, 0.000000, 0.…
 
-I checked for duplicate in the dataset
+I checked for duplicates in the dataset
 
 ``` r
 sum(duplicated(hourly_intensities))
@@ -220,10 +207,8 @@ hourly_intensities %>%
 
 **_Merging hourly_intensities and hourly_calories datasets_**
 
-The number of unique users (id) in dataset ‘hourly_intensities’
-corresponds with that of ‘hourly_calories’, therefore, I will perform a
-full join in other to merge both datasets into 1 and store in it a new
-data frame.
+The number of unique users (id) in the ‘hourly_intensities’ dataset corresponds with that of ‘hourly_calories’.
+Therefore, I performed a full join to merge both datasets into one and stored it in a new data frame.
 
 ``` r
 intensities_calories <- merge(hourly_intensities, hourly_calories,
@@ -243,9 +228,7 @@ glimpse(intensities_calories)
 
 **_hourlySteps_merged Dataset_**
 
-I used the clean_names function to ensure consistency in the dataset,
-then i converted the ‘activity_hour’ column to POSIXct datatype instead
-of character datatype.
+I used the clean_names function to ensure consistency in the dataset, then I converted the ‘activity_hour’ column to a POSIXct datatype instead of a character datatype.
 
 ``` r
 hourly_steps <- hourly_steps %>%
@@ -262,7 +245,7 @@ glimpse(hourly_steps)
     ## $ activity_hour <dttm> 2016-04-12 00:00:00, 2016-04-12 01:00:00, 2016-04-12 02…
     ## $ step_total    <int> 373, 160, 151, 0, 0, 0, 0, 0, 250, 1864, 676, 360, 253, …
 
-I checked for duplicate in the dataset
+I checked for duplicates in the dataset
 
 ``` r
 sum(duplicated(hourly_steps))
@@ -282,10 +265,8 @@ hourly_steps %>%
 
 **_Merging intensities_calories and hourly_steps datasets_**
 
-The number of unique users (id) in dataset ‘hourly_steps’ corresponds to
-that of dataset ‘intensities_calories’, therefore I will perform a full
-join in other to merge both datasets into 1 and store in it a new data
-frame.
+The number of unique users (id) in the ‘hourly_steps’ dataset corresponds to that of the ‘intensities_calories’ dataset. Therefore, I performed a full join to merge both datasets into one and stored it in a new data frame.
+
 
 ``` r
 intensities_calories_steps <- merge(intensities_calories, hourly_steps,
@@ -304,7 +285,7 @@ glimpse(intensities_calories_steps)
     ## $ calories          <int> 81, 61, 59, 47, 48, 48, 48, 47, 68, 141, 99, 76, 73,…
     ## $ step_total        <int> 373, 160, 151, 0, 0, 0, 0, 0, 250, 1864, 676, 360, 2…
 
-I will change the “activity_hour” column to 24hrs time frame
+I changed the “activity_hour” column to a 24-hour time frame.
 
 ``` r
 intensities_calories_steps$activity_hour <- format(intensities_calories_steps$activity_hour, format = "%Y-%m-%d %H:%M:%S")
@@ -321,9 +302,8 @@ glimpse(intensities_calories_steps)
     ## $ calories          <int> 81, 61, 59, 47, 48, 48, 48, 47, 68, 141, 99, 76, 73,…
     ## $ step_total        <int> 373, 160, 151, 0, 0, 0, 0, 0, 250, 1864, 676, 360, 2…
 
-it appears to be in character type after conversion, so i will Convert
-“activity_hour” to a proper datetime object and extract the time
-component into a new column “activity_time”
+It appeared to be in character type after conversion, so I converted “activity_hour” to a proper datetime
+object and extracted the time component into a new column “activity_time.”
 
 ``` r
 intensities_calories_steps$activity_hour <- parse_date_time(intensities_calories_steps$activity_hour, orders = "ymd H:M:S")
@@ -343,7 +323,7 @@ glimpse(intensities_calories_steps)
     ## $ step_total        <int> 373, 160, 151, 0, 0, 0, 0, 0, 250, 1864, 676, 360, 2…
     ## $ activity_time     <chr> "00:00:00", "01:00:00", "02:00:00", "03:00:00", "04:…
 
-I want to reconfirm if any duplicate exist in the dataset
+I wanted to reconfirm if any duplicates existed in the dataset
 
 ``` r
 sum(duplicated(intensities_calories_steps))
@@ -353,15 +333,10 @@ sum(duplicated(intensities_calories_steps))
 
 **_sleepDay_merged Dataset_**
 
-I used the clean_names function to ensure consistency in the dataset,
-then i converted the ‘sleep_day’ column to POSIXct datatype instead of
-character datatype.
+Regarding the “sleepDay_merged Dataset,” I used the clean_names function to ensure consistency in the dataset. Then, I converted the ‘sleep_day’ column to POSIXct datatype instead of character datatype.
 
-The “sleep_day” column only contains the date part without any specific
-time information, so it has been interpreted as (00:00:00 AM (midnight))
-by default. Since the “sleep_day” column only contains date information
-without any specific time, it will be appropriate to convert it to date
-datatype.
+The “sleep_day” column only contains the date part without any specific time information, so it was interpreted as (00:00:00 AM (midnight)) by default. Since the “sleep_day” column only contains date information without any specific time, it was appropriate to convert it to a date datatype.
+
 
 ``` r
 sleep_day <- sleep_day %>%
@@ -381,7 +356,7 @@ glimpse(sleep_day)
     ## $ total_minutes_asleep <int> 327, 384, 412, 340, 700, 304, 360, 325, 361, 430,…
     ## $ total_time_in_bed    <int> 346, 407, 442, 367, 712, 320, 377, 364, 384, 449,…
 
-I checked for duplicate in the dataset
+I checked for duplicates in the dataset
 
 ``` r
 sum(duplicated(sleep_day))
@@ -389,8 +364,7 @@ sum(duplicated(sleep_day))
 
     ## [1] 3
 
-Removing duplicates (3) in sleep_day dataset to avoid
-over-representation
+I removed duplicates (3) in the sleep_day dataset to avoid over-representation.
 
 ``` r
 sleep_day <- sleep_day %>%
@@ -407,7 +381,7 @@ glimpse(sleep_day)
     ## $ total_minutes_asleep <int> 327, 119, 644, 750, 503, 61, 467, 274, 501, 535, …
     ## $ total_time_in_bed    <int> 346, 127, 961, 775, 546, 69, 531, 469, 541, 557, …
 
-confirming if duplicates as been removed
+I confirmed if duplicates have been removed.
 
 ``` r
 sum(duplicated(sleep_day))
@@ -415,7 +389,7 @@ sum(duplicated(sleep_day))
 
     ## [1] 0
 
-I checked the number of unique user from the ‘id’ column
+I checked the number of unique users from the ‘id’ column.
 
 ``` r
 sleep_day %>% 
@@ -427,13 +401,9 @@ sleep_day %>%
 
 **_Merging daily_activity and sleep_day datasets_**
 
-The number of unique users (id) in datasets ‘daily_activity’ and
-‘sleep_day’ is 33 and 22 respectively, so a full join will be performed
-in other to merge both datasets into 1 and store in it a new data frame.
+Regarding the “Merging daily_activity and sleep_day datasets,” the number of unique users (id) in datasets ‘daily_activity’ and ‘sleep_day’ was 33 and 22, respectively. So, a full join was performed to merge both datasets into one, stored in a new data frame.
 
-With the “sleep_day” column now in the Date datatype, performing the
-merge with the “daily_activity_v1” data accurately will be best based on
-the matching dates.
+With the “sleep_day” column now in the Date datatype, the merge with the “daily_activity_v1” data accurately was performed based on the matching dates.
 
 ``` r
 activity_sleep <- merge(daily_activity, sleep_day,
@@ -464,8 +434,7 @@ glimpse(activity_sleep)
     ## $ total_minutes_asleep       <int> 327, 119, 644, 750, 503, 61, 467, 274, 501,…
     ## $ total_time_in_bed          <int> 346, 127, 961, 775, 546, 69, 531, 469, 541,…
 
-confirming how many unique users we now have, a distinct function will
-be performed.
+I confirmed how many unique users we now have using the ‘distinct’ function.
 
 ``` r
 activity_sleep %>% 
@@ -477,9 +446,7 @@ activity_sleep %>%
 
 ### weightLogInfo_merged Dataset
 
-I used the clean_names function to ensure consistency in the dataset,
-then i converted the ‘date’ column to POSIXct datatype instead of
-character datatype.
+Regarding the “weightLogInfo_merged Dataset,” I used the ‘clean_names’ function to ensure consistency in the dataset. Then, I converted the ‘date’ column to a POSIXct datatype instead of a character datatype.
 
 ``` r
 weight_loginfo <- weight_loginfo %>%
@@ -501,7 +468,7 @@ glimpse(weight_loginfo)
     ## $ is_manual_report <chr> "True", "True", "False", "True", "True", "True", "Tru…
     ## $ log_id           <dbl> 1.462234e+12, 1.462320e+12, 1.460510e+12, 1.461283e+1…
 
-I check for duplicate in the dataset
+I checked for duplicates in the dataset
 
 ``` r
 sum(duplicated(weight_loginfo))
@@ -620,8 +587,7 @@ summary(weight_loginfo)
 
 **_Visualization_**
 
-Now, I will visualize the data to gain insights and answer specific
-business questions.
+At that time, I visualized the data to gain insights and answered specific business questions.
 
 **_Intensities_calories_steps Dataset_**
 
@@ -643,12 +609,9 @@ ggplot(data = intensities_calories_steps, aes(x = step_total, y = calories)) +
 
 ![Screenshot 2023-09-26 142242](https://github.com/Adekolaau/Cil_Academy/assets/128713981/bd1e910c-3c7b-403d-98bc-847b0cb23a6c)
 
-- Based on the visualization of the data, it is evident that there is a
-  positive correlation between the number of steps taken and the
-  calories burned. This means that as the number of steps increases, the
-  calories burned also increase. This positive correlation is a
-  significant and encouraging finding for Bellabeat and its users, as it
-  highlights the effectiveness of using step count as an indicator of
+- Based on the visualization of the data, it is evident that there is a positive correlation between the number of steps taken and the
+  calories burned. This means that as the number of steps increases, the calories burned also increase. This positive correlation is a
+  significant and encouraging finding for Bellabeat and its users, as it highlights the effectiveness of using step count as an indicator of
   physical activity and energy expenditure.
 
 ###### Relationship between “average_intensity” and “activity_hour”
@@ -675,20 +638,14 @@ ggplot(int_cal_stp_new, aes(x = activity_time, y = mean_total_int)) +
 
 ![Screenshot 2023-09-26 142421](https://github.com/Adekolaau/Cil_Academy/assets/128713981/e2506701-f815-4cd3-a728-c041ba64c07b)
 
-Based on the visualization of the data, several key observations can be
-made regarding people’s activity patterns:
+Based on the visualization of the data, several key observations can be made regarding people’s activity patterns:
 
-- Peak Activity Hours: The data indicates that people are more active
-  between 5 am and 10 pm. This suggests that the majority of users
-  engage in various activities throughout the day, and there is no
-  significant decline in activity during the evening hours.
+- Peak Activity Hours: The data indicates that people are more active between 5 am and 10 pm. This suggests that the majority of users
+  engage in various activities throughout the day, and there is no significant decline in activity during the evening hours.
 
-- Evening Activity Surge: Specifically, the data shows that the most
-  intense activity happens between 5 pm and 7 pm. During this time
-  frame, it is likely that many individuals have finished their work or
-  daily responsibilities and are now pursuing physical activities such
-  as going to the gym or taking a walk or run. This time period presents
-  a prime opportunity for the Bellabeat app to remind and motivate its
+- Evening Activity Surge: Specifically, the data shows that the most intense activity happens between 5 pm and 7 pm. During this time
+  frame, it is likely that many individuals have finished their work or daily responsibilities and are now pursuing physical activities such
+  as going to the gym or taking a walk or run. This time period presents a prime opportunity for the Bellabeat app to remind and motivate its
   users to engage in physical activities.
 
 **_Activity_sleep Dataset_**
@@ -709,12 +666,9 @@ ggplot(activity_sleep, aes(x = total_minutes_asleep, y = total_time_in_bed)) +
 
 ![Screenshot 2023-09-26 142527](https://github.com/Adekolaau/Cil_Academy/assets/128713981/67a96aa1-b53d-4d22-a976-e8d14b28f47a)
 
-- From the scatter plot visualization, it is evident that there is a
-  positive linear correlation between the time spent in bed and sleep
-  duration. This indicates that as the total time spent in bed
-  increases, the total sleep duration also tends to increase. In other
-  words, individuals who spend more time in bed are likely to get more
-  sleep compared to those who spend less time in bed.
+- From the scatter plot visualization, it is evident that there is a positive linear correlation between the time spent in bed and sleep
+  duration. This indicates that as the total time spent in bed increases, the total sleep duration also tends to increase. In other
+  words, individuals who spend more time in bed are likely to get more sleep compared to those who spend less time in bed.
 
 ###### Relationship between “total minute asleep” and “sedentary minutes”
 
@@ -734,68 +688,46 @@ ggplot(data = activity_sleep, aes(x = total_minutes_asleep, y = sedentary_minute
 
 ![Screenshot 2023-09-26 142713](https://github.com/Adekolaau/Cil_Academy/assets/128713981/a69a2998-b1cd-4503-83a5-219897901285)
 
-- From this visualization, it can be observed that there is a negative
-  correlation between sedentary minutes and total minutes asleep. A
-  negative correlation implies that as the sedentary minutes increase,
-  the total minutes asleep decrease, and vice versa.
+- From this visualization, it can be observed that there is a negative correlation between sedentary minutes and total minutes asleep. A
+  negative correlation implies that as the sedentary minutes increase, the total minutes asleep decrease, and vice versa.
 
-This suggests that spending more time in an inactive or sedentary state
-during a specific period is associated with a reduction in the total
-duration of sleep. In other words, individuals who have longer periods
-of sedentary behavior may experience a decrease in their total sleep
+This suggests that spending more time in an inactive or sedentary state during a specific period is associated with a reduction in the total
+duration of sleep. In other words, individuals who have longer periods of sedentary behavior may experience a decrease in their total sleep
 duration.
 
 **_Summary of Recommendations from Visualizations:_**
 
 ### Relationship between “average_intensity” versus “activity_hour”
 
-Based on the observations, Bellabeat can strategically utilize the 5 pm
-to 7 pm time window to encourage and inspire its users to be more
+Based on the observations, Bellabeat can strategically utilize the 5 pm to 7 pm time window to encourage and inspire its users to be more
 active. Here are some suggestions:
 
-- Push Notifications: Send push notifications around 5 pm to remind
-  users to stay active and suggest activities like walking or jogging.
-- Activity Challenges: Organize challenges during this time slot,
-  offering rewards and badges to active participants.
-- Personalized Activity Plans: Provide customized activity plans for
-  users available between 5 pm and 7 pm.
-- Community and Social Features: Create a social platform for users to
-  share their achievements and motivate each other.
-- Integration with Gyms: Partner with fitness centers to offer exclusive
-  deals during these hours.
+- Push Notifications: Send push notifications around 5 pm to remind users to stay active and suggest activities like walking or jogging.
+- Activity Challenges: Organize challenges during this time slot, offering rewards and badges to active participants.
+- Personalized Activity Plans: Provide customized activity plans for users available between 5 pm and 7 pm.
+- Community and Social Features: Create a social platform for users to share their achievements and motivate each other.
+- Integration with Gyms: Partner with fitness centers to offer exclusive deals during these hours.
 
 ### Relationship between “steps_total” versus “calories”
 
-Understanding the positive correlation between steps and calories
-burned, Bellabeat can:
+Understanding the positive correlation between steps and calories burned, Bellabeat can:
 
-- Set Step Goals: Encourage users to achieve specific step counts daily
-  or weekly.
-- Calorie Tracking: Implement a feature to track calories burned based
-  on steps and user profiles.
-- Activity Intensity Insights: Provide insights into activity intensity
-  based on step count and calories burned.
-- In-App Rewards: Offer rewards and badges for reaching step and
-  calorie-burning milestones.
-- Personalized Recommendations: Offer personalized activity and dietary
-  recommendations.
+- Set Step Goals: Encourage users to achieve specific step counts daily or weekly.
+- Calorie Tracking: Implement a feature to track calories burned based on steps and user profiles.
+- Activity Intensity Insights: Provide insights into activity intensity based on step count and calories burned.
+- In-App Rewards: Offer rewards and badges for reaching step and calorie-burning milestones.
+- Personalized Recommendations: Offer personalized activity and dietary recommendations.
 
 ### Relationship between “total_minute_asleep” versus “total_minute_in_bed”
 
-Encourage users to prioritize healthy sleep habits by allocating
-sufficient time for sleep and creating bedtime routines. Bellabeat can
-set reminders to ensure users spend enough time in bed for better sleep
-quality and overall well-being.
+Encourage users to prioritize healthy sleep habits by allocating sufficient time for sleep and creating bedtime routines. Bellabeat can
+set reminders to ensure users spend enough time in bed for better sleep quality and overall well-being.
 
 ### Relationship between “total minute asleep” versus “sedentary minutes”
 
-While a negative correlation between sedentary minutes and total minutes
-asleep is observed, further research is needed to establish causation.
-To promote better sleep, Bellabeat can encourage reduced sedentary
-behavior, especially near bedtime. Promoting physical activity and
-avoiding prolonged inactivity may positively impact sleep quality, but
-additional studies are required for a comprehensive understanding.
+While a negative correlation between sedentary minutes and total minutes asleep is observed, further research is needed to establish causation.
+To promote better sleep, Bellabeat can encourage reduced sedentary behavior, especially near bedtime. Promoting physical activity and
+avoiding prolonged inactivity may positively impact sleep quality, but additional studies are required for a comprehensive understanding.
 
-By incorporating these insights and recommendations into the Bellabeat
-app, the company can provide its users with valuable guidance and
+By incorporating these insights and recommendations into the Bellabeat app, the company can provide its users with valuable guidance and
 motivation to adopt healthier lifestyles and improve overall well-being.

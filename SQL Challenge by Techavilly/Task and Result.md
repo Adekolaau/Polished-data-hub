@@ -291,7 +291,7 @@ ORDER BY
 SELECT
 
 	YEAR(order_date) AS SalesYear,
-    	ROUND(SUM(sales), 2) AS TotalSales
+	ROUND(SUM(sales), 2) AS TotalSales
 
 FROM
     	

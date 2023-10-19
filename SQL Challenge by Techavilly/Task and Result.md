@@ -1,4 +1,6 @@
-# Introduction to My Techavilly SQL Challenge Journey
+# Techavilly SQL Challenge Journey
+
+**Introduction**
 
 I am excited to embark on this 30-day SQL challenge organized by Techavilly. Over the next month, I'll be tackling daily SQL questions, striving to find elegant and efficient solutions, and sharing my queries along with the results with all of you.
 

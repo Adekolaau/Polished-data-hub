@@ -30,4 +30,4 @@ Thank you to the Techavilly community and my fellow SQL Squidders for this unfor
 
 _Techavilly - Your Partner in Learning & Growth_
 
-_Connect with me on LinkedIn: [Your LinkedIn Profile Link](https://www.linkedin.com/in/umar-adekola/)_
+_Connect with me on LinkedIn: [LinkedIn Profile Link](https://www.linkedin.com/in/umar-adekola/)_

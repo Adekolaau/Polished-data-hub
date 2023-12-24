@@ -20,7 +20,7 @@
 
 - Applied a 5% tax rate.
 
-- ![Screenshot 2023-12-23 164818](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/8ae05ae4-bca4-4b71-a6c3-84dca6696f7f)
+![Screenshot 2023-12-23 164818](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/8ae05ae4-bca4-4b71-a6c3-84dca6696f7f)
 
 Access the published version of the report on PowerBI by [clicking here](https://app.powerbi.com/groups/me/reports/a6ff6f99-77f2-4f09-a6cc-873e58c82c2a/ReportSection?experience=power-bi)
 

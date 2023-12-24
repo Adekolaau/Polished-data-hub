@@ -74,3 +74,17 @@ __Highlights__
 
 * Thorough exploration, data cleansing, analysis, generating insights and practical recommendations of Teleco customer churn dataset.
 * Creation of dashboard to communicate findings effectively.
+
+## Project: BUSINESS PERFORMANCE ANALYSIS REPORT: OFFICE SUPPLIES & SALES
+
+This project represents a significant milestone in my pursuit of leveraging data analytics, particularly in the context of the completed business performance analysis in the office supplies and sales domain.
+
+__Key Points__
+
+* __Data Source:__ Dataleum
+* __Tools:__ Power BI
+
+__Highlights__
+
+* Generating insights and practical recommendations of office supplies and sales for Royalty Limited.
+* Creation of dashboard to communicate findings effectively.

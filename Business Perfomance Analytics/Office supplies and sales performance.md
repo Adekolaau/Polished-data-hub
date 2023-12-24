@@ -1,8 +1,8 @@
 # **BUSINESS PERFORMANCE ANALYSIS REPORT: OFFICE SUPPLIES & SALES**
 
-_Objective:_ Conduct a comprehensive analysis of product performance at Royalty Limited to identify key drivers and address low-performing products.
+**_Objective:_** Conduct a comprehensive analysis of product performance at Royalty Limited to identify key drivers and address low-performing products.
 
-_Products Under Investigation:_
+**_Products Under Investigation:_**
 
 - Biro
 - Pencil
@@ -11,16 +11,18 @@ _Products Under Investigation:_
 - Notepad
 - Stapler
 
-_Approach:_
+**_Approach:_**
 
 - Utilized PowerBI for data visualization.
 - Conducted data analysis to derive actionable insights.
 
-_Assumptions:_
+**_Assumptions:_**
 
 - Applied a 5% tax rate.
 
-Access the published version of the report on PowerBI by http://github.com - automatic1 [clicking here](https://app.powerbi.com/groups/me/reports/a6ff6f99-77f2-4f09-a6cc-873e58c82c2a/ReportSection?experience=power-bi)
+- ![Screenshot 2023-12-23 164818](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/8ae05ae4-bca4-4b71-a6c3-84dca6696f7f)
+
+Access the published version of the report on PowerBI by [clicking here](https://app.powerbi.com/groups/me/reports/a6ff6f99-77f2-4f09-a6cc-873e58c82c2a/ReportSection?experience=power-bi)
 
 ## Key Findings:
 
@@ -49,6 +51,8 @@ _Tax on Profit:_
 _Yearly Profit Flow Analysis:_
 
 - The yearly profit flow analysis indicated a significant increase in profit after tax from September 2013 to December 2014.
+
+![Screenshot 2023-12-23 170513](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/3dc44078-3237-4ef7-b49e-9a788c5bf006)
 
 **Recommendation:**
 
@@ -88,6 +92,8 @@ _Yearly Profit Flow Analysis:_
 
 - The yearly profit flow analysis indicates a substantial increase in profit after tax from September 2013 to December 2014.
 
+![Screenshot 2023-12-23 171714](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/50017685-fd39-4e64-989a-fdbc1c32ce37)
+
 **Recommendation:**
 
 1. Optimize sales and marketing strategies for Midmarket and Channel Partners to address low revenue and negative profitability.
@@ -119,6 +125,8 @@ _Yearly Profit Flow Analysis:_
 
 - The yearly profit flow analysis indicated a substantial increase in profit after tax from September 2013 to December 2014.
 
+![Screenshot 2023-12-23 172512](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/6d604103-9e76-4c95-9baa-4a0adb89c03a)
+
 **Recommendation:**
 
 1.  Optimize sales and marketing strategies in Ondo and Osun States to address low revenue and enhance profitability.
@@ -127,4 +135,4 @@ _Yearly Profit Flow Analysis:_
 4.  Implement cost-effective measures for products with low profit in Oyo and Ogun States to improve overall profitability.
 5.  Maintain the positive trajectory by continually monitoring yearly profit flows and adapting strategies to capitalize on growth opportunities, considering the extended timeframe from September 2013 to December 2014.
 
-                            THANK YOU 🙏🏼
+                                                             THANK YOU 🙏🏼

@@ -43,9 +43,9 @@ __Key Points__
 
 __Highlights__
 
-* Thorough exploration, data cleansing, and analysis of Olist's comprehensive e-commerce dataset.
-* Addressing _14_ key business questions to provide strategic insights to Olist.
-* Visualizations to communicate findings effectively.
+* Thoroughly explored, cleansed, and analyzed Olist's comprehensive e-commerce dataset.
+* Addressed _14_ key business questions to provide strategic insights to Olist.
+* Created visualizations to communicate findings effectively.
 
 ## Virtual Internship: Data Visualisation-Empowering Business with Effective Insights
 
@@ -72,8 +72,8 @@ __Key Points__
 
 __Highlights__
 
-* Thorough exploration, data cleansing, analysis, generating insights and practical recommendations of Teleco customer churn dataset.
-* Creation of dashboard to communicate findings effectively.
+* Conducted a thorough exploration, data cleansing, analysis, generated insights and provided practical recommendations of the Teleco customer churn dataset.
+* Created a dashboard to communicate findings effectively.
 
 ## Project: BUSINESS PERFORMANCE ANALYSIS REPORT: OFFICE SUPPLIES & SALES
 
@@ -86,5 +86,5 @@ __Key Points__
 
 __Highlights__
 
-* Generating insights and practical recommendations of office supplies and sales for Royalty Limited.
-* Creation of dashboard to communicate findings effectively.
+* Generated insights and practical recommendations on office supplies and sales for Royalty Limited.
+* Created a dashboard to communicate findings effectively.

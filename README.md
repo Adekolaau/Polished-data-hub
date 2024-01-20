@@ -84,7 +84,16 @@ __Key Points__
 * __Data Source:__ Dataleum
 * __Tools:__ Power BI
 
+## Project: Strategic Insights Dashboard: Unveiling Sales Performance Patterns at Emily Computers
+
+This project represents a significant milestone in my pursuit of leveraging data analytics, particularly in the context of the completed sales performance analysis in the sales domain.
+
+__Key Points__
+
+* __Data Source:__ Dataleum
+* __Tools:__ Power BI
+
 __Highlights__
 
-* Generated insights and practical recommendations on office supplies and sales for Royalty Limited.
+* Generated insights and practical recommendations on Sales Performance Patterns at Emily Computers.
 * Created a dashboard to communicate findings effectively.

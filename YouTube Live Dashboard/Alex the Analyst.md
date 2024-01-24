@@ -13,10 +13,10 @@ In this project, I've crafted a real-time dashboard analyzing data straight from
 - Data span from December '23 till the latest update.
 - A seamless, user-friendly dashboard experience.
 
-## 🚀 Why is it special?
+### 🚀 Why is it special?
 
 Not only does this project provide valuable insights into YouTube analytics, but it's also a testament to the power of data-driven decision-making. 🤓📊
 
-# 🌟 How to Explore:
+### 🌟 How to Explore:
 
 The "Alex the Analyst Live Dashboard" is now live on PowerBI! Dive into the visuals by [clicking here](https://app.powerbi.com/groups/me/reports/de3a18b5-dbf2-4385-bd63-635037dd2a75/ReportSection?experience=power-bi&bookmarkGuid=Bookmarkb773ef4d227a72865511), explore the features, and let me know your thoughts. 🛠️🤝

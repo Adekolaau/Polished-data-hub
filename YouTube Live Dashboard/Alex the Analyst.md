@@ -2,18 +2,18 @@
 
 ![Screenshot 2024-01-24 154828](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/c09dfb85-9d69-4e91-86fb-e00e1026b7c1)
 
-# 📈 What's it about?
+## 📈 What's it about?
 
-In this project, I've crafted a real-time dashboard analyzing data straight from @Alex_TheAnalyst's YouTube page. 🧐🎥 From December '23 to date, this dashboard offers a dynamic snapshot of Alex's YouTube universe, updating with every refresh! 🔄✨
+In this project, I've crafted a real-time dashboard analyzing data straight from [@Alex_TheAnalyst's](https://youtube.com/@AlexTheAnalyst?si=3awhel8870JZF-eM) YouTube page. 🧐🎥 From December '23 to date, this dashboard offers a dynamic snapshot of Alex's YouTube universe, updating with every refresh! 🔄✨
 
-# 💡 Key Highlights:
+## 💡 Key Highlights:
 
 - Real-time insights into likes and views trends.
 - Total video posted and the engagement rate
 - Data span from December '23 till the latest update.
 - A seamless, user-friendly dashboard experience.
 
-# 🚀 Why is it special?
+## 🚀 Why is it special?
 
 Not only does this project provide valuable insights into YouTube analytics, but it's also a testament to the power of data-driven decision-making. 🤓📊
 

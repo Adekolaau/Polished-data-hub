@@ -47,7 +47,7 @@ Our analysis reveals critical insights about the company’s customer base:
 - Churned Customers: A staggering 1,869 customers have already left.
 - Total Customers: The company serves a total of 7,043 customers.
 
-_Insight:_ The high churn rate is a major concern, leading to substantial revenue loss.
+**_Insight:_** The high churn rate is a major concern, leading to substantial revenue loss.
 
 **Gender Distribution Analysis**
 

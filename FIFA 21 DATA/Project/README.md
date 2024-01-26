@@ -23,12 +23,12 @@ Microsoft Excel was used for this challenge
 
 **Sample of Raw Dataset**
 
-![Screenshot 2024-01-26 145813](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/4a737443-ef9c-459d-8188-e48f17a603bd)
+![Screenshot 2024-01-26 145935](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/ffa3fddc-7b84-4996-8648-044da26f4072)
 
 **Data Cleaning Process**
 I started by using Visual Basic for Application (VBA) to remove the special characters, which was successful.
 
-![Screenshot 2024-01-26 145935](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/ffa3fddc-7b84-4996-8648-044da26f4072)
+![Screenshot 2024-01-26 145813](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/4a737443-ef9c-459d-8188-e48f17a603bd)
 
 However, a colleague suggested using Power Query, which turned out to be the perfect tool for the job. The following steps were taken in Power Query to clean the data:
 

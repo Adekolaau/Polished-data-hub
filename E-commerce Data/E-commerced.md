@@ -2,25 +2,25 @@
 
 ![IMG 001](https://miro.medium.com/v2/resize:fit:720/format:webp/1*Y8W0IP_1enOFPhzgLYcvaA.png)
 
-## INTRODUCTION
+**INTRODUCTION**
 
 In the ever-evolving landscape of data technology, I recently engaged in a captivating data analysis challenge that ignited my passion for exploration and discovery. Despite my initial limited expertise in data analysis tools, I made the strategic decision to seize the dataset and embark on a journey of self-improvement. This dataset, the Olist E-commerce Public Dataset, beckoned with its promise of insights, trends, and untapped potential awaiting discovery. The challenge before me: To navigate the realms of exploration, cleansing, and analysis within the realm of Olist’s e-commerce universe.
 
-## BUSINESS TASK AND APPROACH
+**BUSINESS TASK AND APPROACH**
 
 The primary objective of this analysis is to provide Olist with insights that can drive strategic decisions. By addressing a series of key business questions, we intend to uncover patterns, trends, and opportunities within the dataset. This exploration will facilitate better decision-making and pave the way for Olist’s continued success.
 
-## DATA SOURCES
+**DATA SOURCES**
 
 The core dataset used in this analysis is the Olist sales dataset, sourced from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). This dataset spans from January 2017 to August 2018 and encompasses a comprehensive array of information. It includes details about orders, items, products, payments, customer and seller identification, as well as reviews. Supplementary information regarding sellers, customer behavior, and demographics complements the dataset.
 
 Moreover, external sources, such as industry reports and market trends related to the Brazilian e-commerce sector, could be referenced for contextualization and benchmarking purposes.
 
-## PROCESS PHASES
+**PROCESS PHASES**
 
 In this exploration, Microsoft SQL Server, Excel, and the symphony of R programming join forces to transform raw data into knowledge and insight. The process unfurls in four distinct movements:
 
-**Explore Dataset and Perform Data Validation:** In this phase, the dataset’s integrity and consistency are assessed. The 9 different tables were explored using an Excel spreadsheet, from this process, potential data issues, such as
+**_Explore Dataset and Perform Data Validation:_** In this phase, the dataset’s integrity and consistency are assessed. The 9 different tables were explored using an Excel spreadsheet, from this process, potential data issues, such as
 
 - Unwanted special characters
 
@@ -32,7 +32,7 @@ In this exploration, Microsoft SQL Server, Excel, and the symphony of R programm
 
 Addressing these concerns ensures the reliability of subsequent analyses.
 
-**Data Cleaning:** This phase involves thorough data cleaning. It encompasses handling null and empty values, rectifying inconsistencies, removing duplicates, replacing special characters, and ensuring standardized formats. Clean data forms the foundation for accurate analysis.
+**_Data Cleaning:_** This phase involves thorough data cleaning. It encompasses handling null and empty values, rectifying inconsistencies, removing duplicates, replacing special characters, and ensuring standardized formats. Clean data forms the foundation for accurate analysis.
 
 Microsoft SQL Server Management Studio, complemented by judicious employment of Excel spreadsheets, was used for the data cleaning phase
 
@@ -331,7 +331,7 @@ Orders by Month:
 
 Orders by Season:
 
-\*The analysis of orders by season revealed that the summer season experienced the highest surge in orders, followed by the spring season and then the winter season.
+- The analysis of orders by season revealed that the summer season experienced the highest surge in orders, followed by the spring season and then the winter season.
 
 - The fall season demonstrated the lowest order trends, potentially attributed to business activities concluding during that period.
 

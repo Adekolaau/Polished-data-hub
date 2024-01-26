@@ -38,7 +38,7 @@ However, a colleague suggested using Power Query, which turned out to be the per
 
 - **Load the data into Power Query:** After loading the data, I clicked on the Load drop-down menu and selected "Load To." From the drop-down menu, I chose "Table" and "Existing Worksheet" and clicked "Load." The data was loaded onto the Excel sheet, and I had to locate their Power Query on the right-hand side of the Excel and double-clicked on the Work Query file to load their file to Power Query.
 
-![Screenshot 2023-03-16 094149](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/f75c7e6f-d57b-4eee-a252-354586109ae8)
+![Screenshot 2024-01-26 150047](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/4e0541ca-6dd9-4478-b82c-2986d5918199)
 
 - **Align the data:** I surveyed the data to find out why the cells were big and noticed that the Club column in the observation columns was down while others were written up. I selected the column, right-clicked from the attribute, selected "Transform" from the drop-down menu, and selected the "Length" option. This procedure adjusted it, and the whole data set was well-aligned.
 

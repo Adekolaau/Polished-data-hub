@@ -23,18 +23,18 @@ Microsoft Excel was used for this challenge
 
 **Sample of Raw Dataset**
 
-![Screenshot 2023-03-10 152640](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/1962c6ae-9711-40d9-a4e6-cc9e05e443a8)
+![Screenshot 2024-01-26 145813](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/4a737443-ef9c-459d-8188-e48f17a603bd)
 
 **Data Cleaning Process**
 I started by using Visual Basic for Application (VBA) to remove the special characters, which was successful.
 
-![Screenshot 2023-03-13 190617](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/0742bf71-8fd2-4440-8109-f3694fe30995)
+![Screenshot 2024-01-26 145935](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/ffa3fddc-7b84-4996-8648-044da26f4072)
 
 However, a colleague suggested using Power Query, which turned out to be the perfect tool for the job. The following steps were taken in Power Query to clean the data:
 
 - **Load the data:** A new Excel workbook was opened, and on the menu page, I clicked on Data and located the New Query option. From the drop-down menu, I selected "From File" and chose the compacted file for the database, which was in CSV format. The file was loaded, and I changed the file origin to 65001: Unicode (UTF-8) and also selected "Data Type Detection Based on the entire dataset." Changing the file origin ensured that the players were correctly spelled, and it helped to relieve me of the pain of special characters.
 
-![Screenshot 2023-03-13 152235](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/fa062693-be3c-4847-b886-464e81cbb876)
+![Screenshot 2024-01-26 150017](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/75984597-7bd5-46c8-9209-ac9c2df3d5ae)
 
 - **Load the data into Power Query:** After loading the data, I clicked on the Load drop-down menu and selected "Load To." From the drop-down menu, I chose "Table" and "Existing Worksheet" and clicked "Load." The data was loaded onto the Excel sheet, and I had to locate their Power Query on the right-hand side of the Excel and double-clicked on the Work Query file to load their file to Power Query.
 

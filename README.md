@@ -3,25 +3,6 @@
 A centralized repository for meticulously cleaned and refined data sets, ensuring accuracy and reliability. Ready for analysis and easy access, promoting data integrity and informed decision-making. 
 
 
-
-
-## Project 3: E-COMMERCE DATA
-
-This project is the culmination of my Google Data Analytics Professional Certificate from Coursera, where I embarked on an exploratory journey through the Olist E-commerce Public Dataset. The goal was to gain insights into smart device usage and uncover growth opportunities for Olist.
-
-__Key Points__
-
-* __Data Source:__ [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-* __Programming Language:__ SQL, R
-* __Visualization:__ Symphony of R programming
-* __Tools:__ Microsoft SQL Server, Excel, Power Query
-
-__Highlights__
-
-* Thoroughly explored, cleansed, and analyzed Olist's comprehensive e-commerce dataset.
-* Addressed _14_ key business questions to provide strategic insights to Olist.
-* Created visualizations to communicate findings effectively.
-
 ## Virtual Internship: Data Visualisation-Empowering Business with Effective Insights
 
 This project encapsulates my immersive journey with Forage, where I embarked on a virtual internship in data visualization. It was an opportunity to simulate a real job role and gain hands-on experience guided by industry professionals.

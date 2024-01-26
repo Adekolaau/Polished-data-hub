@@ -48,15 +48,15 @@ However, a colleague suggested using Power Query, which turned out to be the per
 
 - **Clean the Contract column:** I proceeded to remove a special character and replace it with a dash in the Contract column. This was achieved by selecting the column from the attribute, right-clicking on the Contract attribute, and selecting “Replaced Values,”.
 
-![Screenshot 2023-03-16 100802](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/817d1a42-ca05-4b73-83f9-645c8113e183)
+![Screenshot 2024-01-26 150131](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/7eace69c-7850-4592-b196-9a568da8b8f4)
 
 - **Separate positions of the players:** I decided to separate the positions of the players. This was achieved by selecting the Position menu from the attribute (header) and right-clicking, then selecting “Split Columns,” picking the delimiter, and selecting “OK.” The Position.2 and Position.3 had a lot of nulls, so I proceeded to replace them with empty spaces. I used the filter to check the position columns and noticed that they had been properly cleaned.
 
-![Screenshot 2023-03-16 102347](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/0d28bebe-f8bd-4fae-b75b-3fb2b9a4e195)
+![Screenshot 2024-01-26 150202](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/3c58d2bf-ee9e-4c4e-8d40-2b088c2f235a)
 
 - **Convert height to cm:** I noticed that some heights were in cm while others were in foot-inch. I decided to make everything in cm. To do this, I split the column by delimiter and chose the custom option, inputting the proper conversion figure. This created a new column called height2, with all values in inches, leaving the height1 column with cm and feet. I then proceeded to convert the height1 in feet to inches by creating a new column using the conditional column function.
 
-![Screenshot 2023-03-16 111951](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/f6e18aa7-c0e7-4800-a686-db4700fb3ec7)
+(https://github.com/Adekolaau/Polished-data-hub/assets/128713981/606b06eb-a73f-4331-96d6-2861b4e83a69)
 
 I removed the cm sign, changed the height1 and custom columns to decimal numbers, and multiplied the height in cm by 1 and the height in feet by 12 to convert them to inches. We then added the height2 column (in inches) to the multiplication column (in inches) and replaced null values with zero. This created a new column called the Addition column. We then converted the total height to cm by dividing the addition column by the custom1 column, using the divide function in the standard. This created a new column called the division column, with all values in cm.
 

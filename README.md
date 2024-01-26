@@ -4,15 +4,6 @@ A centralized repository for meticulously cleaned and refined data sets, ensurin
 
 
 
-## Project: BUSINESS PERFORMANCE ANALYSIS REPORT: OFFICE SUPPLIES & SALES
-
-This project represents a significant milestone in my pursuit of leveraging data analytics, particularly in the context of the completed business performance analysis in the office supplies and sales domain.
-
-__Key Points__
-
-* __Data Source:__ Dataleum
-* __Tools:__ Power BI
-
 ## Project: STRATEGIC INSIGHTS DASHBOARD: UNVEILING SALES PERFORMANCE PATTERNS AT EMILY'S COMPUTERS
 
 This project represents a significant milestone in my pursuit of leveraging data analytics, particularly in the context of the completed sales performance analysis in the sales domain.

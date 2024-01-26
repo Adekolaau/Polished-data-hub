@@ -56,27 +56,27 @@ However, a colleague suggested using Power Query, which turned out to be the per
 
 - **Convert height to cm:** I noticed that some heights were in cm while others were in foot-inch. I decided to make everything in cm. To do this, I split the column by delimiter and chose the custom option, inputting the proper conversion figure. This created a new column called height2, with all values in inches, leaving the height1 column with cm and feet. I then proceeded to convert the height1 in feet to inches by creating a new column using the conditional column function.
 
-(https://github.com/Adekolaau/Polished-data-hub/assets/128713981/606b06eb-a73f-4331-96d6-2861b4e83a69)
+![Screenshot 2024-01-26 150900](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/74baee9a-37cb-4ff6-8471-b3e3ed678090)
 
 I removed the cm sign, changed the height1 and custom columns to decimal numbers, and multiplied the height in cm by 1 and the height in feet by 12 to convert them to inches. We then added the height2 column (in inches) to the multiplication column (in inches) and replaced null values with zero. This created a new column called the Addition column. We then converted the total height to cm by dividing the addition column by the custom1 column, using the divide function in the standard. This created a new column called the division column, with all values in cm.
 
-![Screenshot 2023-03-16 120903](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/59da3ed1-f5c1-49c5-9cf5-605289389c1f)
+![Screenshot 2024-01-26 150312](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/31b256f1-ea06-488f-9cee-b0dc0c9a28b8)
 
 I changed the division column to a whole number, replaced the initial height column with the division column, deleted the custom, custom1, multiplication, and addition columns, and then dragged the height in cm to replace the height1 and height2 columns.
 
 - **Convert weight to kg:** In the weight column, I noticed that the weight was in kg and lbs. To standardize the weight measurement, I decided to convert everything to kg. Using the conditional column function, I created a new column called KG to convert lbs to kg.
 
-![Screenshot 2023-03-16 130522](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/c228a5e0-0bc4-47c1-9c39-b8b5deb0827d)
+![Screenshot 2024-01-26 150347](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/0bb071b9-7dc8-4671-bc6e-17e8a55017b7)
 
 I then changed the data type of the weight column to a decimal number and removed the kg and pounds. Next, I multiplied both the new KG column and the weight column to create a new column called the multiplication column, which I renamed to the weight column in kg (weight (kg)).
 
-![Screenshot 2023-03-16 143318](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/18ca1d85-2d44-42f6-a55e-c67d757a5524)
+![Screenshot 2024-01-26 150429](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/1ba04ae6-d22b-4f5a-9ade-f6de53f66c48)
 
 The data cleaning process continued until the dataset was free of errors and 100% accurate.
 
 ## Preview of Cleaned Data
 
-![Screenshot 2023-03-16 001936](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/d9f1c997-8f1b-4081-a229-b374a03a51bf)
+![Screenshot 2024-01-26 150508](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/40a9b6cb-f108-4aa1-880b-f060ab4e1d65)
 
 ## Conclusion
 

@@ -8,7 +8,7 @@ When we were confined to our homes, the global pandemic, known as COVID-19, bega
 
 State-by-state implementation of phased lockdowns and slow containment attempts occurred as the country struggled with the obstacles posed by the virus. Vaccines proved to be the ultimate breakthrough, providing a ray of hope and enabling the return to normalcy.
 
-Today, I present to you a live dashboard sourced from the Nigeria Centre for Disease Control (NCDC) website. It is evidence of the continuous fight against COVID-19 in Nigeria. This dashboard shows that the threat is still present, despite the fact that many people may have thought the pandemic was a thing of the past due to the daily ups and downs of life. The NCDC assures us that the fight against COVID-19 is far from done by continuing its diligent efforts to manage and mitigate the present instances, even though they are not generally acknowledged.
+Today, I present to you a live dashboard sourced from the Nigeria Centre for Disease Control [(NCDC)](https://covid19.ncdc.gov.ng/) website. It is evidence of the continuous fight against COVID-19 in Nigeria. This dashboard shows that the threat is still present, despite the fact that many people may have thought the pandemic was a thing of the past due to the daily ups and downs of life. The NCDC assures us that the fight against COVID-19 is far from done by continuing its diligent efforts to manage and mitigate the present instances, even though they are not generally acknowledged.
 
 ![Screenshot 2024-01-22 115822](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/ecc9a866-bcea-4063-bdd0-3a7be34eadb0)
 

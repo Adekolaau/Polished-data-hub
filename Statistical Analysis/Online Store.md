@@ -71,34 +71,32 @@ The intention is to have an idea about the income level of the customer without 
 - 3rd Quartile (Q3): =QUARTILE.INC(I2:I1001, 3) and this resulted to 3rd quartile of 1555
 
 Comparison of Ranges:
-• Range from Minimum to 1st Quartile (Q1): Minimum to Q1: 525 - 106 = 419
-• Range from 3rd Quartile (Q3) to Maximum: Q3 to Maximum: 1555 - 4930 = -3375 (Negative because Q3 is lower than the Maximum)
+- Range from Minimum to 1st Quartile (Q1): Minimum to Q1: 525 - 106 = 419
+- Range from 3rd Quartile (Q3) to Maximum: Q3 to Maximum: 1555 - 4930 = -3375 (Negative because Q3 is lower than the Maximum)
 
 **_Comments:_**
-• The range analysis from the minimum to the 1st quartile (Q1) is 419, indicating that the majority of customers have relatively low total purchase amounts, with the minimum value being 106 and the 1st quartile at 525.
-• The range analysis from the 3rd quartile (Q3) to the maximum is -3375, suggesting that a significant portion of customers (25% to 100%) has higher total purchase amounts, as the 3rd quartile is lower than the maximum. This indicates that a few customers have considerably higher total purchases, contributing to the wider spread of values in the upper range.
+- The range analysis from the minimum to the 1st quartile (Q1) is 419, indicating that the majority of customers have relatively low total purchase amounts, with the minimum value being 106 and the 1st quartile at 525.
+- The range analysis from the 3rd quartile (Q3) to the maximum is -3375, suggesting that a significant portion of customers (25% to 100%) has higher total purchase amounts, as the 3rd quartile is lower than the maximum. This indicates that a few customers have considerably higher total purchases, contributing to the wider spread of values in the upper range.
 
 **Question 2:** Calculate the percentage breakdown of Gender and Mrt_Status columns. Namely what percentage of users are Female vs Male, and what percentage of users are Married vs Single. Comment on whether the breakdowns seem reasonable or they are unexpected?
 
 **_Answer_**
 
 1. For Gender:
-   • I counted the number of females (F) and males (M) then Calculated the percentage of females and males using this formula.
+I counted the number of females (F) and males (M) then Calculated the percentage of females and males using this formula.
 
-=COUNTIF(C2:C1001, "F") / COUNTA(C2:C1001) this resulted to 0.503 (50%) female
-
-=COUNTIF(C2:C1001, "M") / COUNTA(C2:C1001) this resulted to 0.497% (50%) male
+- =COUNTIF(C2:C1001, "F") / COUNTA(C2:C1001) this resulted to 0.503 (50%) female
+- =COUNTIF(C2:C1001, "M") / COUNTA(C2:C1001) this resulted to 0.497% (50%) male
 
 2. For Mrt_Status:
-   • I counted the number of Married and Single users then calculated the percentage of Married and Single users using this formula
+I counted the number of Married and Single users then calculated the percentage of Married and Single users using this formula
 
-=COUNTIF(D2:D1001, "Married") / COUNTA(D2:D1001) this resulted to 0.414 (41%) for married
-
-=COUNTIF(D2:D1001, "Single") / COUNTA(D2:D1001) this resulted to 0.586 (59%) for single
+- =COUNTIF(D2:D1001, "Married") / COUNTA(D2:D1001) this resulted to 0.414 (41%) for married
+- =COUNTIF(D2:D1001, "Single") / COUNTA(D2:D1001) this resulted to 0.586 (59%) for single
 
 **_Comments:_**
-• The percentage breakdown for Gender is approximately 50% for both male and female, this suggests a balanced representation of genders in the dataset, which is generally reasonable.
-• For Mrt_Status, a higher percentage of single users was recorded compared to married users. This suggests that a significant portion of the customer base is not currently married which is generally reasonable.
+- The percentage breakdown for Gender is approximately 50% for both male and female, this suggests a balanced representation of genders in the dataset, which is generally reasonable.
+- For Mrt_Status, a higher percentage of single users was recorded compared to married users. This suggests that a significant portion of the customer base is not currently married which is generally reasonable.
 
 **Question 3:** Prepare a frequency distribution of Num_Purchase. Present it as a table of values and also as a histogram.
 
@@ -130,8 +128,8 @@ Frequency Distribution Histogram
 ![image](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/b8c5545e-01ae-4f45-a8cf-1d0de0f035ba)
 
 **_Comments:_**
-• The first bar with a larger bin size of 5 suggests that the majority of observations fall within the lower range of "Num_Purchase", specifically within the values 0 to 4.3.
-• The second bar with a smaller bin size of 3 indicates that there is a subset of observations with "Num_Purchase" values in the range of 4.3 to 8.6.
+- The first bar with a larger bin size of 5 suggests that the majority of observations fall within the lower range of "Num_Purchase", specifically within the values 0 to 4.3.
+- The second bar with a smaller bin size of 3 indicates that there is a subset of observations with "Num_Purchase" values in the range of 4.3 to 8.6.
 
 **Question 4:** Prepare a histogram of Tot_Purchase. Divide the range [0, 5000] into 5 equal bins. Comment on the distribution of total purchases.
 
@@ -160,10 +158,10 @@ Frequency Distribution Histogram
 ![image](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/2d2e2af3-32c4-4cff-85f6-606503fb2517)
 
 **_Comments:_**
-• The frequency distribution table provides a clear breakdown of the number of purchases across two categories (bin).
-• The fact that there are four occurrences within this range (first bin [0, 3200]) suggests that a significant number of customers have relatively lower total purchases. It indicates a concentration of customers with values within the [0, 3200] range.
-• The presence of only one occurrence in this bin (second bin [3200, 6400]) suggests that there is a distinct group of customers with higher total purchases. This could be a smaller subset of customers who contribute significantly to the higher end of the total purchase distribution.
-• The distribution is not evenly spread across all bins, indicating some level of concentration at specific total purchase ranges.
+- The frequency distribution table provides a clear breakdown of the number of purchases across two categories (bin).
+- The fact that there are four occurrences within this range (first bin [0, 3200]) suggests that a significant number of customers have relatively lower total purchases. It indicates a concentration of customers with values within the [0, 3200] range.
+- The presence of only one occurrence in this bin (second bin [3200, 6400]) suggests that there is a distinct group of customers with higher total purchases. This could be a smaller subset of customers who contribute significantly to the higher end of the total purchase distribution.
+- The distribution is not evenly spread across all bins, indicating some level of concentration at specific total purchase ranges.
 
 **Question 5:**
 Prepare a bar chart of the sum of Tot_Purchase breakdown by Age. Here is how to do this: Partition the data by Age groups. Calculate the sum of Tot_Purchase in each group. Bars in the chart will correspond to Age group where height of each bar will equal the sum of Tot_Purchase values within each Age group. Comment on the distribution of total purchase across age groups.
@@ -260,4 +258,4 @@ Upper Confidence Limit
 
 ![Screenshot 2024-01-29 162700](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/4d76be44-6c66-482c-9016-3b351a933e18)
 
-                              THANK YOU 😊
+                                                                                            THANK YOU 😊

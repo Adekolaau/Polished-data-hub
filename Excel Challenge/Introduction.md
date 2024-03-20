@@ -1,5 +1,7 @@
 # Excel Mastery: 30-Day Challenge Documentation
 
+![download (4)](https://github.com/Adekolaau/Polished-data-hub/assets/128713981/58e9c743-011d-40c0-9ae3-807ebd6f97d8)
+
 **Introduction:**
 
 Welcome to the conclusion of my journey through the Excel 30-Day Challenge, meticulously organized by [Techavilly](www.techavilly.net). Over the past month, I've delved deep into the complex world of spreadsheets, formulas, Pivot Table, What-If Analysis and Power Query, pushing the boundaries of my Excel proficiency with each passing day. This challenge has been more than just a series of tasks; it's been a transformative experience, sharpening my analytical skills, enhancing my problem-solving abilities, and expanding my understanding of Excel's vast capabilities.

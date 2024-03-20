@@ -5,18 +5,11 @@ Google Capstone Project - Bellabeat
 
 ## Introduction
 
-In this analysis, I will explore and visualize the Bellabeat datasets to
-gain insights into smart device usage and its relationship with
-Bellabeat’s products. The datasets include daily activity, hourly
-calories, hourly intensities, hourly steps, sleep day, and weight log
-information. I will focus on data cleaning, exploration, and
-visualization to address specific business questions and provide
-valuable insights for Bellabeat.
+In the analysis, I explored and visualized the Bellabeat datasets to gain insights into smart device usage and its relationship with Bellabeat’s products. The datasets included daily activity, hourly calories, hourly intensities, hourly steps, sleep day, and weight log information. I focused on data cleaning, exploration, and visualization to address specific business questions and provided valuable insights for Bellabeat.
 
 ## Installing and Loading Packages
 
-I will start by installing and loading necessary packages for data
-manipulation and visualization.
+I started by installing and loading necessary packages for data manipulation and visualization.
 
 ``` r
 install.packages("tidyverse")
@@ -73,7 +66,7 @@ library(here)
 
 ## Loading datasets
 
-Next, I will load the datasets required for analysis:
+Next, I loaded the datasets required for analysis.
 
 ``` r
 daily_activity <- read.csv("/cloud/project/bellabeat/dailyActivity_merged.csv")
@@ -86,13 +79,11 @@ weight_loginfo <- read.csv("/cloud/project/bellabeat/weightLogInfo_merged.csv")
 
 ## Data Cleaning and Exploration
 
-I will clean and explore each dataset to prepare them for analysis.
+I cleaned and explored each dataset to prepare them for analysis.
 
 ### dailyActivity_merged Dataset
 
-I used the clean_names function to ensure consistency in the dataset,
-then i converted the ‘activity_date’ column to date datatype instead of
-character datatype.
+I used the `clean_names` function to ensure consistency in the dataset, then I converted the ‘activity_date’ column to date datatype instead of character datatype.
 
 ``` r
 daily_activity <- daily_activity %>%
@@ -121,7 +112,7 @@ glimpse(daily_activity)
     ## $ sedentary_minutes          <int> 728, 776, 1218, 726, 773, 539, 1149, 775, 8…
     ## $ calories                   <int> 1985, 1797, 1776, 1745, 1863, 1728, 1921, 2…
 
-I checked for duplicate in the dataset
+I checked for duplicates in the dataset
 
 ``` r
 sum(duplicated(daily_activity))
@@ -160,7 +151,7 @@ glimpse(hourly_calories)
     ## $ activity_hour <dttm> 2016-04-12 00:00:00, 2016-04-12 01:00:00, 2016-04-12 02…
     ## $ calories      <int> 81, 61, 59, 47, 48, 48, 48, 47, 68, 141, 99, 76, 73, 66,…
 
-I checked for duplicate in the dataset
+I checked for duplicates in the dataset
 
 ``` r
 sum(duplicated(hourly_calories))
@@ -180,7 +171,7 @@ hourly_calories %>%
 
 ### hourlyIntensities_merged Dataset
 
-I used the clean_names function to ensure consistency in the dataset,
+I used the `clean_names` function to ensure consistency in the dataset,
 then i converted the ‘activity_hour’ column to POSIXct datatype instead
 of character datatype.
 
@@ -200,7 +191,7 @@ glimpse(hourly_intensities)
     ## $ total_intensity   <int> 20, 8, 7, 0, 0, 0, 0, 0, 13, 30, 29, 12, 11, 6, 36, …
     ## $ average_intensity <dbl> 0.333333, 0.133333, 0.116667, 0.000000, 0.000000, 0.…
 
-I checked for duplicate in the dataset
+I checked for duplicates in the dataset
 
 ``` r
 sum(duplicated(hourly_intensities))
@@ -220,10 +211,7 @@ hourly_intensities %>%
 
 ### Merging hourly_intensities and hourly_calories datasets
 
-The number of unique users (id) in dataset ‘hourly_intensities’
-corresponds with that of ‘hourly_calories’, therefore, I will perform a
-full join in other to merge both datasets into 1 and store in it a new
-data frame.
+The number of unique users (id) in the dataset ‘hourly_intensities’ corresponds with that of ‘hourly_calories’, therefore, I performed a full join in order to merge both datasets into 1 and stored it in a new data frame.
 
 ``` r
 intensities_calories <- merge(hourly_intensities, hourly_calories,
@@ -262,7 +250,7 @@ glimpse(hourly_steps)
     ## $ activity_hour <dttm> 2016-04-12 00:00:00, 2016-04-12 01:00:00, 2016-04-12 02…
     ## $ step_total    <int> 373, 160, 151, 0, 0, 0, 0, 0, 250, 1864, 676, 360, 253, …
 
-I checked for duplicate in the dataset
+I checked for duplicates in the dataset
 
 ``` r
 sum(duplicated(hourly_steps))
@@ -282,10 +270,7 @@ hourly_steps %>%
 
 ### Merging intensities_calories and hourly_steps datasets
 
-The number of unique users (id) in dataset ‘hourly_steps’ corresponds to
-that of dataset ‘intensities_calories’, therefore I will perform a full
-join in other to merge both datasets into 1 and store in it a new data
-frame.
+The number of unique users (id) in the dataset ‘hourly_steps’ corresponds to that of dataset ‘intensities_calories’, therefore I performed a full join to merge both datasets into one and stored it in a new dataframe.
 
 ``` r
 intensities_calories_steps <- merge(intensities_calories, hourly_steps,
@@ -304,7 +289,7 @@ glimpse(intensities_calories_steps)
     ## $ calories          <int> 81, 61, 59, 47, 48, 48, 48, 47, 68, 141, 99, 76, 73,…
     ## $ step_total        <int> 373, 160, 151, 0, 0, 0, 0, 0, 250, 1864, 676, 360, 2…
 
-I will change the “activity_hour” column to 24hrs time frame
+I changed the “activity_hour” column to a 24-hour time frame.
 
 ``` r
 intensities_calories_steps$activity_hour <- format(intensities_calories_steps$activity_hour, format = "%Y-%m-%d %H:%M:%S")
@@ -321,9 +306,7 @@ glimpse(intensities_calories_steps)
     ## $ calories          <int> 81, 61, 59, 47, 48, 48, 48, 47, 68, 141, 99, 76, 73,…
     ## $ step_total        <int> 373, 160, 151, 0, 0, 0, 0, 0, 250, 1864, 676, 360, 2…
 
-it appears to be in character type after conversion, so i will Convert
-“activity_hour” to a proper datetime object and extract the time
-component into a new column “activity_time”
+I converted “activity_hour” to a proper datetime object and extracted the time component into a new column named “activity_time” since it appeared to be in character type after conversion.
 
 ``` r
 intensities_calories_steps$activity_hour <- parse_date_time(intensities_calories_steps$activity_hour, orders = "ymd H:M:S")
@@ -343,7 +326,7 @@ glimpse(intensities_calories_steps)
     ## $ step_total        <int> 373, 160, 151, 0, 0, 0, 0, 0, 250, 1864, 676, 360, 2…
     ## $ activity_time     <chr> "00:00:00", "01:00:00", "02:00:00", "03:00:00", "04:…
 
-I want to reconfirm if any duplicate exist in the dataset
+I reconfirmed if any duplicates exist in the dataset.
 
 ``` r
 sum(duplicated(intensities_calories_steps))
@@ -353,15 +336,9 @@ sum(duplicated(intensities_calories_steps))
 
 ### sleepDay_merged Dataset
 
-I used the clean_names function to ensure consistency in the dataset,
-then i converted the ‘sleep_day’ column to POSIXct datatype instead of
-character datatype.
+I used the `clean_names` function to ensure consistency in the dataset, then I converted the ‘sleep_day’ column to POSIXct datatype instead of character datatype.
 
-The “sleep_day” column only contains the date part without any specific
-time information, so it has been interpreted as (00:00:00 AM (midnight))
-by default. Since the “sleep_day” column only contains date information
-without any specific time, it will be appropriate to convert it to date
-datatype.
+The “sleep_day” column only contains the date part without any specific time information, so it has been interpreted as 00:00:00 AM (midnight) by default. Since the “sleep_day” column only contains date information without any specific time, it is appropriate to convert it to date datatype.
 
 ``` r
 sleep_day <- sleep_day %>%
@@ -381,7 +358,7 @@ glimpse(sleep_day)
     ## $ total_minutes_asleep <int> 327, 384, 412, 340, 700, 304, 360, 325, 361, 430,…
     ## $ total_time_in_bed    <int> 346, 407, 442, 367, 712, 320, 377, 364, 384, 449,…
 
-I checked for duplicate in the dataset
+I checked for duplicates in the dataset
 
 ``` r
 sum(duplicated(sleep_day))
@@ -389,8 +366,7 @@ sum(duplicated(sleep_day))
 
     ## [1] 3
 
-Removing duplicates (3) in sleep_day dataset to avoid
-over-representation
+I removed duplicates (3) in the sleep_day dataset to avoid over-representation.
 
 ``` r
 sleep_day <- sleep_day %>%
@@ -407,7 +383,7 @@ glimpse(sleep_day)
     ## $ total_minutes_asleep <int> 327, 119, 644, 750, 503, 61, 467, 274, 501, 535, …
     ## $ total_time_in_bed    <int> 346, 127, 961, 775, 546, 69, 531, 469, 541, 557, …
 
-confirming if duplicates as been removed
+I confirmed if duplicates have been removed.
 
 ``` r
 sum(duplicated(sleep_day))
@@ -415,7 +391,7 @@ sum(duplicated(sleep_day))
 
     ## [1] 0
 
-I checked the number of unique user from the ‘id’ column
+I checked the number of unique users from the ‘id’ column.
 
 ``` r
 sleep_day %>% 
@@ -427,13 +403,9 @@ sleep_day %>%
 
 ### Merging daily_activity and sleep_day datasets
 
-The number of unique users (id) in datasets ‘daily_activity’ and
-‘sleep_day’ is 33 and 22 respectively, so a full join will be performed
-in other to merge both datasets into 1 and store in it a new data frame.
+The number of unique users (id) in datasets ‘daily_activity’ and ‘sleep_day’ is 33 and 22 respectively, so a full join will be performed to merge both datasets into one and store it in a new dataframe.
 
-With the “sleep_day” column now in the Date datatype, performing the
-merge with the “daily_activity_v1” data accurately will be best based on
-the matching dates.
+With the “sleep_day” column now in the Date datatype, performing the merge with the “daily_activity_v1” data accurately will be best based on the matching dates.
 
 ``` r
 activity_sleep <- merge(daily_activity, sleep_day,
@@ -464,8 +436,7 @@ glimpse(activity_sleep)
     ## $ total_minutes_asleep       <int> 327, 119, 644, 750, 503, 61, 467, 274, 501,…
     ## $ total_time_in_bed          <int> 346, 127, 961, 775, 546, 69, 531, 469, 541,…
 
-confirming how many unique users we now have, a distinct function will
-be performed.
+Confirming how many unique users we now have, I will perform a distinct function.
 
 ``` r
 activity_sleep %>% 
@@ -477,9 +448,7 @@ activity_sleep %>%
 
 ### weightLogInfo_merged Dataset
 
-I used the clean_names function to ensure consistency in the dataset,
-then i converted the ‘date’ column to POSIXct datatype instead of
-character datatype.
+I used the `clean_names` function to ensure consistency in the dataset, then I converted the ‘date’ column to POSIXct datatype instead of character datatype.
 
 ``` r
 weight_loginfo <- weight_loginfo %>%
@@ -501,7 +470,7 @@ glimpse(weight_loginfo)
     ## $ is_manual_report <chr> "True", "True", "False", "True", "True", "True", "Tru…
     ## $ log_id           <dbl> 1.462234e+12, 1.462320e+12, 1.460510e+12, 1.461283e+1…
 
-I check for duplicate in the dataset
+I checked for duplicates in the dataset.
 
 ``` r
 sum(duplicated(weight_loginfo))
@@ -509,7 +478,7 @@ sum(duplicated(weight_loginfo))
 
     ## [1] 0
 
-I checked the number of unique user from the ‘id’ column
+I checked the number of unique users from the ‘id’ column.
 
 ``` r
 weight_loginfo %>% 
@@ -521,7 +490,7 @@ weight_loginfo %>%
 
 ## Summary Statistics
 
-Let’s summarize the datasets before visualization.
+Before visualization, let's summarize the datasets.
 
 ``` r
 summary(intensities_calories_steps)
@@ -620,8 +589,7 @@ summary(weight_loginfo)
 
 ## Visualization
 
-Now, I will visualize the data to gain insights and answer specific
-business questions.
+Now, I visualized the data to gain insights and answer specific business questions.
 
 ### Intensities_calories_steps Dataset
 
